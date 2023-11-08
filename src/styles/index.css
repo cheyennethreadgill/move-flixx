@@ -20,6 +20,11 @@ body {
   color: #ebe5e2;
 }
 
+@media screen and (max-width: 37.5em) {
+  body {
+    font-size: 130%;
+  }
+}
 .genre {
   display: grid;
   grid-template-columns: repeat(5, 320px);
