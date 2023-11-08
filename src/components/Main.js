@@ -7,18 +7,20 @@ function Main(movies) {
       return movie;
     }
   });
-  const popularMovies = movies.filter((movie) => {
-    if (movie.popularity >= 1000) {
-      return movie;
-    }
-  } ).slice(0,5)
-    
+  const popularMovies = movies
+    .filter((movie) => {
+      if (movie.popularity >= 1000) {
+        return movie;
+      }
+    })
+    .slice(0, 5);
 
   const highlyRatedMovieContent = highlyRatedMovies
     .map((movie) => {
       const {img, rating, title} = movie;
       return `
       <div class="movie">
+      
         <div class="movie-img-container">
             <img
             src=${img}
@@ -48,7 +50,8 @@ function Main(movies) {
     </div>
       `;
     })
-    .join('');
+        .join( '' );
+    
   highRatingContainer.innerHTML = highlyRatedMovieContent;
   popularContainer.innerHTML = popularMoviesContent;
 }
