@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .container {
   padding: 5rem 2rem;
 }
@@ -21,6 +25,7 @@ body {
   grid-template-columns: repeat(5, 1fr);
   -moz-column-gap: 2.8rem;
        column-gap: 2.8rem;
+  overflow-x: auto;
 }
 .genre .movie {
   height: 45vh;
