@@ -10,15 +10,16 @@ const MoviesList = async function () {
 
   // returning movie array
   const movieList = moviesGrab.map((movie) => {
-    const movieData = {
-      title: movie.title,
-      rating: movie.vote_average,
-      ratingCount: movie.vote_count,
-      description: movie.overview,
-      img: IMG_PATH + movie.poster_path,
-      backgroundImg: IMG_PATH + movie.backdrop_path,
-      genre: movie.genre_ids,
-    };
+      const movieData = {
+        popularity: movie.popularity,
+        title: movie.title,
+        rating: movie.vote_average,
+        ratingCount: movie.vote_count,
+        description: movie.overview,
+        img: IMG_PATH + movie.poster_path,
+        backgroundImg: IMG_PATH + movie.backdrop_path,
+        genre: movie.genre_ids,
+      };
     return movieData;
   });
 
