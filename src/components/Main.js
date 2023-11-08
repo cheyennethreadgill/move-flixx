@@ -16,7 +16,7 @@ function Main(movies) {
             class="movie-img"
             src=${img}
             alt="Five Nights" />
-        <h2>${title}</h2>
+        <h3>${title}</h3>
         <span class="rating">${rating}</span>
     </div>
       `;

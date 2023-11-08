@@ -1,10 +1,10 @@
 .genre {
   display: grid;
-  grid-template-columns: repeat(5, 15rem);
-  // grid-template-rows: auto;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 2.8rem;
 
   .movie {
-    height: 20rem;
+    height: 45vh;
 
     &-img {
       height: 100%;

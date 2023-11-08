@@ -18,10 +18,12 @@ body {
 
 .genre {
   display: grid;
-  grid-template-columns: repeat(5, 15rem);
+  grid-template-columns: repeat(5, 1fr);
+  -moz-column-gap: 2.8rem;
+       column-gap: 2.8rem;
 }
 .genre .movie {
-  height: 20rem;
+  height: 45vh;
 }
 .genre .movie-img {
   height: 100%;
