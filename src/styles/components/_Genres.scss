@@ -1,7 +1,7 @@
 .genre {
   display: grid;
-  grid-template-columns: repeat(5, 160px);
-  column-gap: 2.8rem;
+  grid-template-columns: repeat(5, 33vw);
+  column-gap: 1.2rem;
   overflow-x: scroll;
   grid-template-rows: repeat(1, auto);
 
@@ -9,7 +9,7 @@
 
     &-img-container {
             
-        height: 200px;
+        height: 22vh;
         width: 100%;
 
         img {
@@ -19,4 +19,17 @@
         }
     }
   }
+}
+
+// over ipad
+@media screen and (min-width: 37.5em) {
+    .genre {    
+        grid-template-columns: repeat(5, 283px);
+        .movie {
+
+        &-img-container {
+            height: 40vh;
+        }
+      }
+    }
 }
