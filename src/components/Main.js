@@ -1,4 +1,4 @@
-const genre = document.querySelector('.genre');
+const highRating = document.querySelector('.high-rating');
 
 function Main(movies) {
   const highlyRatedMovies = movies.filter((movie) => {
@@ -24,7 +24,7 @@ function Main(movies) {
       `;
     })
     .join('');
-  genre.innerHTML = movieContent;
+  highRating.innerHTML = movieContent;
 }
 
 // Dont need, already rendering in the async function

@@ -1,6 +1,6 @@
 .genre {
   display: grid;
-  grid-template-columns: repeat(5, 20rem);
+  grid-template-columns: repeat(5, 320px);
   column-gap: 2.8rem;
   overflow-x: scroll;
 
@@ -8,7 +8,7 @@
 
     &-img-container {
             
-        height: 25vh;
+        height: 500px;
         width: 100%;
 
         img {

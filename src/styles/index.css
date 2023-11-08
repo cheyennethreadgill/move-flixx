@@ -22,13 +22,13 @@ body {
 
 .genre {
   display: grid;
-  grid-template-columns: repeat(5, 20rem);
+  grid-template-columns: repeat(5, 320px);
   -moz-column-gap: 2.8rem;
        column-gap: 2.8rem;
   overflow-x: scroll;
 }
 .genre .movie-img-container {
-  height: 25vh;
+  height: 500px;
   width: 100%;
 }
 .genre .movie-img-container img {
