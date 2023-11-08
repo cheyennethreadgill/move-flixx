@@ -1,0 +1,13 @@
+.genre {
+  display: grid;
+  grid-template-columns: repeat(5, 15rem);
+  // grid-template-rows: auto;
+
+  .movie {
+    height: 20rem;
+
+    &-img {
+      height: 100%;
+    }
+  }
+}
