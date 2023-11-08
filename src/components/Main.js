@@ -11,7 +11,7 @@ function Main(movies) {
     if (movie.popularity >= 1000) {
       return movie;
     }
-  } );
+  } ).slice(0,5)
     
 
   const highlyRatedMovieContent = highlyRatedMovies
