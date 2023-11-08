@@ -1,14 +1,15 @@
 .genre {
   display: grid;
-  grid-template-columns: repeat(5, 320px);
+  grid-template-columns: repeat(5, 160px);
   column-gap: 2.8rem;
   overflow-x: scroll;
+  grid-template-rows: repeat(1, auto);
 
   .movie {
 
     &-img-container {
             
-        height: 500px;
+        height: 200px;
         width: 100%;
 
         img {
