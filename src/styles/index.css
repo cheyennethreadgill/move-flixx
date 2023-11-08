@@ -87,6 +87,7 @@ header {
      object-fit: cover;
 }
 .genre .movie-text {
+  padding: 0.5rem;
   background-color: rgba(58, 58, 99, 0.5294117647);
 }
 

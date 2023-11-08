@@ -10,7 +10,7 @@
   .movie {
   
     border-radius: 1rem;
-    
+
     &-img-container {
         
         height: 22vh;
@@ -25,6 +25,8 @@
     }
 
     &-text {
+        
+    padding: 0.5rem;
         background-color: $color-dark-blue;
     }
   }
