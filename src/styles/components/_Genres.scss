@@ -3,7 +3,7 @@
   grid-template-columns: repeat(5, 33vw);
   column-gap: 1.2rem;
   grid-template-rows: repeat(1, auto);
-  margin: 0 0 5rem 0;
+
 
 
   .movie {
@@ -25,14 +25,15 @@
 // under ipad
 @media screen and (max-width: 37.5em) {
     .genre {  
-        
-  overflow-x: scroll;
+        overflow-x: scroll;
+        margin: 0 0 1rem 0;
     }
 }
 // over ipad
 @media screen and (min-width: 37.5em) {
     .genre {    
         grid-template-columns: repeat(5, 283px);
+        margin: 0 0 5rem 0;
         .movie {
 
         &-img-container {

@@ -51,7 +51,6 @@ body {
   -moz-column-gap: 1.2rem;
        column-gap: 1.2rem;
   grid-template-rows: repeat(1, auto);
-  margin: 0 0 5rem 0;
 }
 .genre .movie-img-container {
   height: 22vh;
@@ -67,11 +66,13 @@ body {
 @media screen and (max-width: 37.5em) {
   .genre {
     overflow-x: scroll;
+    margin: 0 0 1rem 0;
   }
 }
 @media screen and (min-width: 37.5em) {
   .genre {
     grid-template-columns: repeat(5, 283px);
+    margin: 0 0 5rem 0;
   }
   .genre .movie-img-container {
     height: 40vh;
