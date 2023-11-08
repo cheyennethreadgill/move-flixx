@@ -1,14 +1,21 @@
 .genre {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 20rem);
   column-gap: 2.8rem;
-  overflow-x:auto;
+  overflow-x: scroll;
 
   .movie {
-    height: 45vh;
 
-    &-img {
-      height: 100%;
+    &-img-container {
+            
+        height: 25vh;
+        width: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
     }
   }
 }

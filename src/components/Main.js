@@ -12,10 +12,12 @@ function Main(movies) {
       const {img, rating, title} = movie;
       return `
       <div class="movie">
-        <img
-            class="movie-img"
+        <div class="movie-img-container">
+            <img
             src=${img}
-            alt="Five Nights" />
+            alt="Five Nights" /> 
+        </div>
+       
         <h3>${title}</h3>
         <span class="rating">${rating}</span>
     </div>

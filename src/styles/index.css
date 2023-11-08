@@ -22,14 +22,18 @@ body {
 
 .genre {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 20rem);
   -moz-column-gap: 2.8rem;
        column-gap: 2.8rem;
-  overflow-x: auto;
+  overflow-x: scroll;
 }
-.genre .movie {
-  height: 45vh;
+.genre .movie-img-container {
+  height: 25vh;
+  width: 100%;
 }
-.genre .movie-img {
+.genre .movie-img-container img {
   height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=index.css.map */
