@@ -8,6 +8,19 @@
 
 body {
   overflow-x: hidden;
+  font-weight: 100;
+}
+
+h1, h2, h3, h4 {
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 2.1rem;
 }
 
 .container {
