@@ -19,10 +19,6 @@ h1 {
   margin: 0 0 1rem 0;
 }
 
-.container {
-  padding: 5rem 2rem;
-}
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #373b69;
@@ -30,11 +26,19 @@ body {
 }
 
 @media screen and (max-width: 37.5em) {
+  .container {
+    padding: 5rem 0.5rem;
+  }
   h1 {
     font-size: 2.5rem;
   }
   h3 {
     font-size: 1rem;
+  }
+}
+@media screen and (min-width: 37.5em) {
+  .container {
+    padding: 5rem 2rem;
   }
 }
 .genre {
