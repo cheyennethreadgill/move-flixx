@@ -9,32 +9,53 @@
 body {
     overflow-x: hidden;
     font-weight: 100;
+    font-family: $font-main;
+    background-color: $color-black;
+    color: $color-white;
 }
+
 h1, h2, h3, h4 {
     text-transform: capitalize;
+    font-weight: 600;
 }
 
 h1 {
-    margin: 0 0 1.5rem 0;
+    letter-spacing: .7px;
+    color: $color-teal;
+}
+h2, h2 {
+    text-transform: uppercase;
 }
 h2 {
     margin: 0 0 1rem 0;
+    letter-spacing: .3px;
+    color: $color-teal-light;
+}
+h3 {
+    font-weight: 400;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #373b69;
-  color: #ebe5e2;
+header {
+    background-color: $color-dark-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    margin: 0 0 2rem 0;
 }
+
 
 // media queries
 // under ipad
 @media screen and (max-width: 37.5em) {
     .container {
-        padding: 5rem .5rem;
+        padding: 0 .7rem;
       }
     h1 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.1rem;
     }
     h3 {
         font-size: 1rem;
@@ -44,7 +65,7 @@ body {
 // over ipad
 @media screen and (min-width: 37.5em) {
     .container {
-        padding: 5rem 2rem;
+        padding: 0 2rem;
       }
 }
 
