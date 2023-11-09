@@ -5,6 +5,9 @@
   padding: 0;
   margin: 0;
 }
+.container {
+  position: relative;
+}
 // helpers
 .d-flex {
   display: flex;
@@ -16,6 +19,7 @@
   width: 100%;
   display: flex;
   gap: 20px;
+  margin: 0 0 1rem 0;
 }
 .col-2 {
   width: 8.33 * 2;
@@ -24,6 +28,7 @@ col-10 {
   width: 83.33%;
 }
 
+// buttons
 button {
   background-color: transparent;
   border: none;

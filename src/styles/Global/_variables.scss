@@ -1,6 +1,7 @@
 // Color
-$color-periwinkle: #708ed2;
-$color-white: #ebe5e2;
+$color-light-periwinkle: #eceefb;
+$color-periwinkle: #8190eb;
+$color-white: #ffffff;
 $color-teal: #83cfdf;
 $color-teal-light: #83d0dfd8;
 $color-blue-green: #13688c;
@@ -17,4 +18,16 @@ $font-main: "Nunito Sans", sans-serif;
   color: $color-white;
   font-size: 1.5rem;
   padding: 1.5rem;
+}
+
+.btn-navigation {
+  content: "";
+  position: absolute;
+  border: solid 2px $color-periwinkle;
+  border-radius: 10rem;
+  width: 3rem;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
