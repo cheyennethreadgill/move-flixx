@@ -5,7 +5,20 @@
   padding: 0;
   margin: 0;
 }
+// helpers
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 1rem 0;
 
+    button {
+        background-color: transparent;
+        border: none;
+        color: $color-periwinkle;
+        cursor: pointer;
+    }
+}
 body {
     overflow-x: hidden;
     font-weight: 100;
@@ -14,7 +27,7 @@ body {
     color: $color-white;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4  {
     text-transform: capitalize;
     font-weight: 600;
 }
@@ -23,11 +36,14 @@ h1 {
     letter-spacing: .7px;
     color: $color-teal;
 }
+button {
+    font-weight: 500;
+    font-size: .9rem;
+}
 h2, h2 {
     text-transform: uppercase;
 }
 h2 {
-    margin: 0 0 1rem 0;
     letter-spacing: .3px;
     color: $color-teal-light;
 }

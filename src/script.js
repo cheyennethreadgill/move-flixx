@@ -1,4 +1,4 @@
-import Main from './components/Main.js';
+import CreateMovieScroll from './components/Main.js';
 
 const MoviesList = async function () {
   const API_URL =
@@ -10,23 +10,24 @@ const MoviesList = async function () {
 
   // returning movie array
   const movieList = moviesGrab.map((movie) => {
-      const movieData = {
-        popularity: movie.popularity,
-        title: movie.title,
-        rating: movie.vote_average,
-        ratingCount: movie.vote_count,
-        description: movie.overview,
-        img: IMG_PATH + movie.poster_path,
-        backgroundImg: IMG_PATH + movie.backdrop_path,
-        genre: movie.genre_ids,
-      };
+    const movieData = {
+      popularity: movie.popularity,
+      title: movie.title,
+      rating: movie.vote_average,
+      ratingCount: movie.vote_count,
+      description: movie.overview,
+      img: IMG_PATH + movie.poster_path,
+      backgroundImg: IMG_PATH + movie.backdrop_path,
+      genre: movie.genre_ids,
+      date: movie.release_date,
+    };
     return movieData;
   });
 
   console.log(moviesGrab);
 
   // passing movie array to main component
-  Main(movieList);
+  CreateMovieScroll(movieList);
 };
 
 MoviesList();

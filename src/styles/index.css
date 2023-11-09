@@ -6,6 +6,19 @@
   margin: 0;
 }
 
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 1rem 0;
+}
+.d-flex button {
+  background-color: transparent;
+  border: none;
+  color: #708ED2;
+  cursor: pointer;
+}
+
 body {
   overflow-x: hidden;
   font-weight: 100;
@@ -24,12 +37,16 @@ h1 {
   color: #83CFDF;
 }
 
+button {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
 h2, h2 {
   text-transform: uppercase;
 }
 
 h2 {
-  margin: 0 0 1rem 0;
   letter-spacing: 0.3px;
   color: rgba(131, 208, 223, 0.8470588235);
 }
