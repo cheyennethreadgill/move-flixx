@@ -1,0 +1,31 @@
+.single-movie {
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    gap: 2rem;
+    background-image: linear-gradient(to top, #292847 69.5%, transparent 100%);
+  }
+
+  &-img {
+    position: absolute;
+    z-index: -1;
+  }
+
+  &-content {
+    background-color: $color-white;
+    color: $color-black;
+    padding: 2rem;
+    border-radius: 1rem;
+
+    .img-container {
+      width: 24vw;
+    }
+
+    h1 {
+      color: $color-periwinkle;
+    }
+  }
+}

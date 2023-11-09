@@ -1,58 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0"/>
+      content="width=device-width, initial-scale=1.0"
+    />
     <meta description="This is Movie Flixx. A cozy app for streaming movies." />
     <link
       rel="stylesheet"
       href="src/styles/index.css"
-      type="text/css" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,500&display=swap" rel="stylesheet">
+      type="text/css"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,500&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Movie Flixx</title>
   </head>
 
   <body>
-    <header>
+    <!-- <header>
       <div class="container">
-        <h1>Movie Flixx
-
-      </h1>
-      </div>
-      
-    </header>
-    
-    <div class="container">
+        <h1>Movie Flixx</h1>
+        </div>
+        </header> -->
     <main>
-      <!-- <div class="d-flex">
-        <h2>Highly Rated</h2>
-      </div>
-      
-        <section class="high-rating genre">
-        </section>
+      <section class="single-movie">
+        <div class="single-movie-img">
+          <img
+            src="  https://image.tmdb.org/t/p/w1280/5mzr6JZbrqnqD8rCEvPhuCE5Fw2.jpg"
+            alt=""
+          />
+        </div>
+        <div class="container">
+          <section class="single-movie-content">
+            <div class="row">
+              <div class="col-2">
+                <div class="img-container">
+                  <img
+                    src="https://image.tmdb.org/t/p/w1280/4m1Au3YkjqsxF8iwQy0fPYSxE0h.jpg"
+                    alt="Alice"
+                  />
+                </div>
+              </div>
+              <div class="col-10">
+                <p>40,325</p>
+                <h1>Alice In Wonderland</h1>
+              </div>
+            </div>
 
-        <h2>Popular Movies</h2>
-        <section class="popular genre">
-        </section> -->
-
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
+              autem nisi qu is quibusdam deserunt quaer\ at voluptatem pariatur,
+              blanditiis expedita. Volupta tibus deserunt quos architecto
+              voluptate porro, repudiandae nulla iusto assumenda et!
+            </p>
+          </section>
+          <button class="btn-primary">Buy Movie</button>
+        </div>
+      </section>
     </main>
   </body>
 
+  <!-- BG -->
+  <!-- https://image.tmdb.org/t/p/w1280/5mzr6JZbrqnqD8rCEvPhuCE5Fw2.jpg -->
+  <!-- reg -->
+  <!-- https://image.tmdb.org/t/p/w1280/4m1Au3YkjqsxF8iwQy0fPYSxE0h.jpg -->
+
   <script
-    src="/src/script.js"
+    src="script.js"
     type="module"
-    defer></script>
+    defer
+  ></script>
   <script
     src="/src/components/Main.js"
     type="module"
-    defer></script>
-  <script
-    src="/src/components/AZ.js"
-    type="module"
-    defer></script>
+    defer
+  ></script>
 </html>

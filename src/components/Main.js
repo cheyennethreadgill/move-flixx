@@ -1,54 +1,24 @@
-// const highRatingContainer = document.querySelector('.high-rating');
-// const popularContainer = document.querySelector('.popular');
-const main = document.querySelector('main');
+const main = document.querySelector("main");
 
 function CreateMovieScroll(movies) {
-  // const highlyRatedMovies = movies.filter((movie) => {
-  //   if (movie.rating >= 7.6) {
-  //     return movie;
-  //   }
-  // });
-
-  // const highlyRatedMovieContent = highlyRatedMovies
-  //   .map((movie) => {
-  //     const {img, rating, title} = movie;
-  //     return `
-  //   <div class="movie">
-  //   <div class="movie-img-container">
-  //   <img
-  //   src=${img}
-  //   alt="Five Nights" />
-  //   </div>
-  //   <div class="movie-text">
-  //   <h3>${title}</h3>
-  //   <span class="rating">${rating}</span>
-  //   </div>
-  //   </div>
-  //   `;
-  //   })
-  //   .join('');
-
-  // highRatingContainer.innerHTML = highlyRatedMovieContent;
-
   // *********************************************
   // create az section
   (function AZ() {
     // *********************************************
-    // const aZ = document.querySelector('.a-z');
-    const movieSection = document.createElement('section');
-    movieSection.setAttribute('class', 'movie-section');
+    const movieSection = document.createElement("section");
+    movieSection.setAttribute("class", "movie-section");
 
-    const dFlex = document.createElement('div');
-    dFlex.setAttribute('class', 'd-flex');
+    const dFlex = document.createElement("div");
+    dFlex.setAttribute("class", "d-flex");
     dFlex.innerHTML = `
     <h2>A-Z</h2>
     <button id="a-z">See All</button>
   `;
     movieSection.appendChild(dFlex);
 
-    const moviesContainer = document.createElement('section');
-    moviesContainer.setAttribute('class', 'a-z');
-    moviesContainer.setAttribute('class', 'genre');
+    const moviesContainer = document.createElement("section");
+    moviesContainer.setAttribute("class", "a-z");
+    moviesContainer.setAttribute("class", "movies");
 
     // a-z
     const aZArray = movies
@@ -61,9 +31,9 @@ function CreateMovieScroll(movies) {
 
     const aZContent = aZArray
       .map((movie) => {
-        const {img, rating, title} = movie;
+        const { img, rating, title } = movie;
         return `
-      <div class="movie">
+      <button class="movie">
         <div class="movie-img-container">
           <img
           src=${img}
@@ -73,24 +43,23 @@ function CreateMovieScroll(movies) {
           <h3>${title}</h3>
           <span class="rating">${rating}</span> 
         </div>
-      </div>
+      </button>
       `;
       })
-      .join('');
+      .join("");
     moviesContainer.innerHTML = aZContent;
     movieSection.appendChild(moviesContainer);
     main.appendChild(movieSection);
-    // aZ.innerHTML = aZContent;
     // *********************************************
 
     // show AZ page
-    document.getElementById('a-z').addEventListener('click', showAZ, false);
+    document.getElementById("a-z").addEventListener("click", showAZ, false);
     // trigger when see all button is pressed
     function showAZ(movies) {
       const azPageContent = aZArray.map((movie) => {
-        const {img, rating, title} = movie;
+        const { img, rating, title } = movie;
         return `
-        <div class="movie">
+        <button class="movie">
           <div class="movie-img-container">
               <img
               src=${img}
@@ -99,7 +68,7 @@ function CreateMovieScroll(movies) {
          <div class="movie-text">
               <h3>${title}</h3>
               <span class="rating">${rating}</span> 
-         </div>
+         </button>
          
       </div>
         `;
@@ -110,20 +79,20 @@ function CreateMovieScroll(movies) {
 
   (function CriticallyAcclaimed() {
     // *********************************************
-    const movieSection = document.createElement('section');
-    movieSection.setAttribute('class', 'movie-section');
+    const movieSection = document.createElement("section");
+    movieSection.setAttribute("class", "movie-section");
 
-    const dFlex = document.createElement('div');
-    dFlex.setAttribute('class', 'd-flex');
+    const dFlex = document.createElement("div");
+    dFlex.setAttribute("class", "d-flex");
     dFlex.innerHTML = `
     <h2>Critically Acclaimed</h2>
     <button id="a-z">See All</button>
   `;
     movieSection.appendChild(dFlex);
 
-    const moviesContainer = document.createElement('section');
-    moviesContainer.setAttribute('class', 'critically-acclaimed');
-    moviesContainer.setAttribute('class', 'genre');
+    const moviesContainer = document.createElement("section");
+    moviesContainer.setAttribute("class", "critically-acclaimed");
+    moviesContainer.setAttribute("class", "movies");
 
     // CriticallyAcclaimed
     const CriticallyAcclaimed = movies
@@ -135,9 +104,9 @@ function CreateMovieScroll(movies) {
       .slice(0, 5);
 
     const CriticallyAcclaimedContent = CriticallyAcclaimed.map((movie) => {
-      const {img, rating, title} = movie;
+      const { img, rating, title } = movie;
       return `
-    <div class="movie">
+    <button class="movie">
     <div class="movie-img-container">
     <img
     src=${img}
@@ -146,11 +115,11 @@ function CreateMovieScroll(movies) {
     <div class="movie-text">
     <h3>${title}</h3>
     <span class="rating">${rating}</span>
-    </div>
+    </dbutton
 
     </div>
     `;
-    }).join('');
+    }).join("");
     moviesContainer.innerHTML = CriticallyAcclaimedContent;
     movieSection.appendChild(moviesContainer);
     main.appendChild(movieSection);
@@ -158,20 +127,20 @@ function CreateMovieScroll(movies) {
 
   (function New() {
     // *********************************************
-    const movieSection = document.createElement('section');
-    movieSection.setAttribute('class', 'movie-section');
+    const movieSection = document.createElement("section");
+    movieSection.setAttribute("class", "movie-section");
 
-    const dFlex = document.createElement('div');
-    dFlex.setAttribute('class', 'd-flex');
+    const dFlex = document.createElement("div");
+    dFlex.setAttribute("class", "d-flex");
     dFlex.innerHTML = `
     <h2>new</h2>
     <button id="a-z">See All</button>
   `;
     movieSection.appendChild(dFlex);
 
-    const moviesContainer = document.createElement('section');
-    moviesContainer.setAttribute('class', 'new');
-    moviesContainer.setAttribute('class', 'genre');
+    const moviesContainer = document.createElement("section");
+    moviesContainer.setAttribute("class", "new");
+    moviesContainer.setAttribute("class", "movies");
 
     // New
     const New = movies
@@ -183,9 +152,9 @@ function CreateMovieScroll(movies) {
       .slice(0, 5);
 
     const NewContent = New.map((movie) => {
-      const {img, rating, title} = movie;
+      const { img, rating, title, backgroundImg } = movie;
       return `
-    <div class="movie">
+    <button class="movie">
     <div class="movie-img-container">
     <img
     src=${img}
@@ -194,15 +163,27 @@ function CreateMovieScroll(movies) {
     <div class="movie-text">
     <h3>${title}</h3>
     <span class="rating">${rating}</span>
-    </div>
+    </dbutton
 
     </div>
     `;
-    }).join('');
+    }).join("");
     moviesContainer.innerHTML = NewContent;
     movieSection.appendChild(moviesContainer);
     main.appendChild(movieSection);
   })();
+
+  // **********************END OF COMPONENT*******
+  const movie = document.querySelectorAll(".movie");
+
+  movie.forEach((item) => {
+    item.addEventListener("click", createMoviePage, false);
+  });
+
+  function createMoviePage() {
+    main.innerHTML = movieContent;
+    console.log("test");
+  }
 }
 
 // Dont need, already rendering in the async function

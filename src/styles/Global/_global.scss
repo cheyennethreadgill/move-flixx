@@ -7,82 +7,101 @@
 }
 // helpers
 .d-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 1rem 0;
+}
+.row {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.col-2 {
+  width: 8.33 * 2;
+}
+col-10 {
+  width: 83.33%;
+}
 
-    button {
-        background-color: transparent;
-        border: none;
-        color: $color-periwinkle;
-        cursor: pointer;
-    }
+button {
+  background-color: transparent;
+  border: none;
+  color: $color-periwinkle;
+  cursor: pointer;
 }
 body {
-    overflow-x: hidden;
-    font-weight: 100;
-    font-family: $font-main;
-    background-color: $color-black;
-    color: $color-white;
+  overflow-x: hidden;
+  font-weight: 100;
+  font-family: $font-main;
+  background-color: $color-black;
+  color: $color-white;
 }
 
-h1, h2, h3, h4  {
-    text-transform: capitalize;
-    font-weight: 600;
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  font-weight: 600;
 }
 
 h1 {
-    letter-spacing: .7px;
-    color: $color-teal;
+  letter-spacing: 0.7px;
+  color: $color-teal;
 }
 button {
-    font-weight: 500;
-    font-size: .9rem;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
-h2, h2 {
-    text-transform: uppercase;
+h2,
+h2 {
+  text-transform: uppercase;
 }
 h2 {
-    letter-spacing: .3px;
-    color: $color-teal-light;
+  letter-spacing: 0.3px;
+  color: $color-teal-light;
 }
 h3 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 header {
-    background-color: $color-dark-blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5rem;
-    margin: 0 0 2rem 0;
+  background-color: $color-dark-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  margin: 0 0 2rem 0;
 }
 
+img {
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
 // media queries
 // under ipad
 @media screen and (max-width: 37.5em) {
-    .container {
-        padding: 0 .7rem;
-      }
-    h1 {
-        font-size: 1.5rem;
-    }
-    h2 {
-        font-size: 1.1rem;
-    }
-    h3 {
-        font-size: 1rem;
-    }
+  .container {
+    padding: 0 1.5rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
 }
 
 // over ipad
 @media screen and (min-width: 37.5em) {
-    .container {
-        padding: 0 2rem;
-      }
+  .container {
+    padding: 0 2rem;
+  }
 }
-
-
