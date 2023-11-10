@@ -182,6 +182,7 @@ img {
 
 @media screen and (max-width: 37.5em) {
   .movies {
+    overflow-x: scroll;
     margin: 0 0 2.5rem 0;
   }
 }
