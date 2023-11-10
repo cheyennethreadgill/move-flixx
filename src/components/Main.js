@@ -1,4 +1,5 @@
 const main = document.querySelector("main");
+const header = document.querySelector("header");
 
 function CreateMovieScroll(movies) {
   // *********************************************
@@ -61,6 +62,7 @@ function CreateMovieScroll(movies) {
       const azPageContent = aZArray.map((movie) => {
         const { img, rating, title, popularity } = movie;
         return `
+        
         <button class="movie" value=${popularity} value=${popularity}>
           <div class="movie-img-container">
               <img
@@ -308,7 +310,12 @@ function CreateMovieScroll(movies) {
 
         document.querySelectorAll(".movie-section").forEach((section) => {
           section.classList.add("hide");
+          header.classList.add("hide");
+
           if (section.classList.contains("show")) {
+            header.classList.add("hide");
+            header.classList.remove("show");
+
             section.classList.add("hide");
             section.classList.remove("show");
           }
@@ -325,6 +332,9 @@ function CreateMovieScroll(movies) {
               document.querySelectorAll(".movie-section").forEach((section) => {
                 section.classList.remove("hide");
                 section.classList.add("show");
+
+                header.classList.remove("hide");
+                header.classList.add("show");
               });
               main.removeChild(movieContentSection);
             },
