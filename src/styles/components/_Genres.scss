@@ -1,9 +1,9 @@
 .movies {
   display: grid;
   grid-template-columns: repeat(5, 33vw);
-  grid-template-rows: max-content;
-  //   grid-template-rows: minmax(242px, auto);
+  grid-template-rows: repeat(1, 1fr);
   column-gap: 1.2rem;
+  padding: 0 0 0.5rem 0;
 
   .movie {
     background-color: transparent;
