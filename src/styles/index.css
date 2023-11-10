@@ -252,9 +252,7 @@ img {
   display: grid;
   grid-template-columns: repeat(6, 110px);
   grid-template-rows: minmax(50px, auto);
-  padding: 1rem;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  padding: 1.5rem;
   overflow-x: auto;
 }
 .single-movie-cast-div {
