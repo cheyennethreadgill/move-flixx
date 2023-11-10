@@ -87,6 +87,13 @@ img {
   object-fit: cover;
 }
 
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
 // media queries
 // under ipad
 @media screen and (max-width: 37.5em) {

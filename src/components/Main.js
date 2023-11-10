@@ -307,7 +307,11 @@ function CreateMovieScroll(movies) {
         main.appendChild(movieContentSection);
 
         document.querySelectorAll(".movie-section").forEach((section) => {
-          main.removeChild(section);
+          section.classList.add("hide");
+          if (section.classList.contains("show")) {
+            section.classList.add("hide");
+            section.classList.remove("show");
+          }
         });
 
         // GO BACK HOME
@@ -319,7 +323,8 @@ function CreateMovieScroll(movies) {
             () => {
               console.log("work");
               document.querySelectorAll(".movie-section").forEach((section) => {
-                main.appendChild(section);
+                section.classList.remove("hide");
+                section.classList.add("show");
               });
               main.removeChild(movieContentSection);
             },
@@ -331,9 +336,6 @@ function CreateMovieScroll(movies) {
     );
   });
 }
-
-// function backToHome() {
-// }
 
 // Dont need, already rendering in the async function
 //    CreateMovieScroll();
