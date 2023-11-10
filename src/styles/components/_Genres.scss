@@ -1,56 +1,53 @@
 .movies {
   display: grid;
   grid-template-columns: repeat(5, 33vw);
-  grid-template-rows: minmax(350px, auto);
+  grid-template-rows: minmax(242px, auto);
   column-gap: 1.2rem;
 
   .movie {
     background-color: transparent;
     color: $color-white;
     cursor: pointer;
-    border-top-left-radius: .5em;
-    border-top-right-radius: .5em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
     border: 0;
 
     &-img-container {
-        
-        height: 22vh;
-        width: 100%;
+      height: 22vh;
+      width: 100%;
+      border-radius: inherit;
+
+      img {
         border-radius: inherit;
-        
-        img {
-            border-radius: inherit;
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
 
     &-text {
-        
-    padding: 0.5rem;
-        background-color: $color-dark-blue;
+      padding: 0.5rem;
+      background-color: $color-dark-blue;
     }
   }
 }
 
 // under ipad
 @media screen and (max-width: 37.5em) {
-    .movies {  
-        overflow-x: scroll;
-        margin: 0 0 1rem 0;
-    }
+  .movies {
+    overflow-x: scroll;
+    margin: 0 0 1rem 0;
+  }
 }
 // over ipad
 @media screen and (min-width: 37.5em) {
-    .movies {    
-        grid-template-columns: repeat(5, 283px);
-        margin: 0 0 5rem 0;
-        .movie {
-
-        &-img-container {
-            height: 40vh;
-        }
+  .movies {
+    grid-template-columns: repeat(5, 283px);
+    margin: 0 0 5rem 0;
+    .movie {
+      &-img-container {
+        height: 40vh;
       }
     }
+  }
 }
