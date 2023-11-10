@@ -4,7 +4,7 @@
   background-color: #8190eb;
   color: #ffffff;
   font-size: 1.5rem;
-  padding: 1.5rem;
+  padding: 1.2rem;
 }
 
 .btn-navigation {
@@ -12,10 +12,10 @@
   position: absolute;
   border: solid 2px #8190eb;
   border-radius: 10rem;
-  width: 3rem;
-  height: 3rem;
-  top: 0;
-  left: 0;
+  width: 2.3rem;
+  height: 2.3rem;
+  top: 37px;
+  left: 22px;
   z-index: 1;
 }
 
@@ -188,7 +188,7 @@ img {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  gap: 2rem;
+  gap: 1rem;
   margin: 1rem 0 0 0;
 }
 .single-movie .wrapper {
