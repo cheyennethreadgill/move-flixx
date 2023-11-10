@@ -227,6 +227,7 @@ img {
 .single-movie-content h1,
 .single-movie-content h2 {
   color: #8190eb;
+  line-height: 25px;
 }
 .single-movie-content h2 {
   margin: 1.5rem 0 1rem 0;
