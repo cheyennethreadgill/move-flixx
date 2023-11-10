@@ -2,10 +2,11 @@ const main = document.querySelector("main");
 
 function CreateMovieScroll(movies) {
   // *********************************************
+  var movieSection;
   // create az section
   (function AZ() {
     // *********************************************
-    const movieSection = document.createElement("section");
+    movieSection = document.createElement("section");
     movieSection.setAttribute("class", "movie-section");
 
     const dFlex = document.createElement("div");
@@ -80,7 +81,7 @@ function CreateMovieScroll(movies) {
 
   (function CriticallyAcclaimed() {
     // *********************************************
-    const movieSection = document.createElement("section");
+    movieSection = document.createElement("section");
     movieSection.setAttribute("class", "movie-section");
 
     const dFlex = document.createElement("div");
@@ -128,7 +129,7 @@ function CreateMovieScroll(movies) {
 
   (function New() {
     // *********************************************
-    const movieSection = document.createElement("section");
+    movieSection = document.createElement("section");
     movieSection.setAttribute("class", "movie-section");
 
     const dFlex = document.createElement("div");
@@ -212,6 +213,7 @@ function CreateMovieScroll(movies) {
           popularity,
         } = movie;
 
+        const movieContentSection = document.createElement("section");
         const movieContent = `
       <section class="single-movie">
         <button class="btn-navigation">
@@ -300,8 +302,15 @@ function CreateMovieScroll(movies) {
         </div>
       </section>
     `;
-        main.innerHTML = movieContent;
+        movieContentSection.innerHTML = movieContent;
 
+        main.appendChild(movieContentSection);
+
+        document.querySelectorAll(".movie-section").forEach((section) => {
+          main.removeChild(section);
+        });
+
+        // GO BACK HOME
         const backButtons = document.querySelectorAll(".btn-navigation");
 
         backButtons.forEach((button) => {
@@ -309,6 +318,10 @@ function CreateMovieScroll(movies) {
             "click",
             () => {
               console.log("work");
+              document.querySelectorAll(".movie-section").forEach((section) => {
+                main.appendChild(section);
+              });
+              main.removeChild(movieContentSection);
             },
             false
           );
