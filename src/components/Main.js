@@ -12,7 +12,7 @@ function CreateMovieScroll(movies) {
     dFlex.setAttribute("class", "d-flex");
     dFlex.innerHTML = `
     <h2>A-Z</h2>
-    <button id="a-z">See All</button>
+    <button id="a-z" class="seeAll">See All</button>
   `;
     movieSection.appendChild(dFlex);
 
@@ -33,7 +33,7 @@ function CreateMovieScroll(movies) {
       .map((movie) => {
         const { img, rating, title, popularity } = movie;
         return `
-      <button class="movie" value=${popularity}>
+      <button class="movie" value=${popularity} value=${popularity}>
         <div class="movie-img-container">
           <img
           src=${img}
@@ -60,7 +60,7 @@ function CreateMovieScroll(movies) {
       const azPageContent = aZArray.map((movie) => {
         const { img, rating, title, popularity } = movie;
         return `
-        <button class="movie" value=${popularity}>
+        <button class="movie" value=${popularity} value=${popularity}>
           <div class="movie-img-container">
               <img
               src=${img}
@@ -87,7 +87,7 @@ function CreateMovieScroll(movies) {
     dFlex.setAttribute("class", "d-flex");
     dFlex.innerHTML = `
     <h2>Critically Acclaimed</h2>
-    <button id="a-z">See All</button>
+    <button id="critically-acclaimed" class="seeAll">See All</button>
   `;
     movieSection.appendChild(dFlex);
 
@@ -105,9 +105,9 @@ function CreateMovieScroll(movies) {
       .slice(0, 5);
 
     const CriticallyAcclaimedContent = CriticallyAcclaimed.map((movie) => {
-      const { img, rating, title } = movie;
+      const { img, rating, title, popularity } = movie;
       return `
-    <button class="movie">
+    <button class="movie" value=${popularity}>
     <div class="movie-img-container">
     <img
     src=${img}
@@ -135,7 +135,7 @@ function CreateMovieScroll(movies) {
     dFlex.setAttribute("class", "d-flex");
     dFlex.innerHTML = `
     <h2>new</h2>
-    <button id="a-z">See All</button>
+    <button id="new" class="seeAll">See All</button>
   `;
     movieSection.appendChild(dFlex);
 
@@ -153,11 +153,18 @@ function CreateMovieScroll(movies) {
       .slice(0, 5);
 
     const NewContent = New.map((movie) => {
-      const { backgroundImg, img, title, description, ratingCount, rating } =
-        movie;
+      const {
+        backgroundImg,
+        img,
+        title,
+        description,
+        ratingCount,
+        rating,
+        popularity,
+      } = movie;
 
       return `
-    <button class="movie">
+    <button class="movie" value=${popularity}>
     <div class="movie-img-container">
     <img
     src=${img}
@@ -179,6 +186,7 @@ function CreateMovieScroll(movies) {
   // **********************END OF COMPONENT*******
   const movie = document.querySelectorAll(".movie");
 
+  // SHOW SINGLE MOVIE PAGE
   movie.forEach((item) => {
     // console.log(item.value);
     item.addEventListener(
@@ -293,11 +301,26 @@ function CreateMovieScroll(movies) {
       </section>
     `;
         main.innerHTML = movieContent;
+
+        const backButtons = document.querySelectorAll(".btn-navigation");
+
+        backButtons.forEach((button) => {
+          button.addEventListener(
+            "click",
+            () => {
+              console.log("work");
+            },
+            false
+          );
+        });
       },
       false
     );
   });
 }
+
+// function backToHome() {
+// }
 
 // Dont need, already rendering in the async function
 //    CreateMovieScroll();
