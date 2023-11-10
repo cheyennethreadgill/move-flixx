@@ -72,9 +72,9 @@ function CreateMovieScroll(movies) {
          <div class="movie-text">
               <h3>${title}</h3>
               <span class="rating">${rating}</span> 
-         </button>
-         
-      </div>
+              
+          </div>
+        </button>
         `;
       });
       main.innerHTML = azPageContent;
@@ -111,17 +111,16 @@ function CreateMovieScroll(movies) {
       const { img, rating, title, popularity } = movie;
       return `
     <button class="movie" value=${popularity}>
-    <div class="movie-img-container">
-    <img
-    src=${img}
-    alt=${title} />
-    </div>
-    <div class="movie-text">
-    <h3>${title}</h3>
-    <span class="rating">${rating}</span>
-    </dbutton
-
-    </div>
+      <div class="movie-img-container">
+        <img
+        src=${img}
+        alt=${title} />
+      </div>
+      <div class="movie-text">
+        <h3>${title}</h3>
+        <span class="rating">${rating}</span>
+      </div>
+    </button>
     `;
     }).join("");
     moviesContainer.innerHTML = CriticallyAcclaimedContent;
@@ -168,17 +167,16 @@ function CreateMovieScroll(movies) {
 
       return `
     <button class="movie" value=${popularity}>
-    <div class="movie-img-container">
-    <img
-    src=${img}
-    alt=${title} />
-    </div>
-    <div class="movie-text">
-    <h3>${title}</h3>
-    <span class="rating">${rating}</span>
-    </dbutton
-
-    </div>
+      <div class="movie-img-container">
+        <img
+        src=${img}
+        alt=${title} />
+      </div>
+      <div class="movie-text">
+        <h3>${title}</h3>
+        <span class="rating">${rating}</span>
+      </div>
+    </button>
     `;
     }).join("");
     moviesContainer.innerHTML = NewContent;

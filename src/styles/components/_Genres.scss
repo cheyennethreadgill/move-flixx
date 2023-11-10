@@ -1,7 +1,8 @@
 .movies {
   display: grid;
   grid-template-columns: repeat(5, 33vw);
-  grid-template-rows: minmax(242px, auto);
+  grid-template-rows: repeat(1, auto);
+  //   grid-template-rows: minmax(242px, auto);
   column-gap: 1.2rem;
 
   .movie {
@@ -14,6 +15,7 @@
 
     &-img-container {
       height: 22vh;
+      //   height: 100%;
       width: 100%;
       border-radius: inherit;
 
@@ -35,8 +37,8 @@
 // under ipad
 @media screen and (max-width: 37.5em) {
   .movies {
-    overflow-x: scroll;
-    margin: 0 0 1rem 0;
+    // overflow-x: scroll;
+    margin: 0 0 2.5rem 0;
   }
 }
 // over ipad
