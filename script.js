@@ -27,9 +27,10 @@ const MoviesList = async function () {
   });
 
   console.log(moviesGrab);
+  console.log(movieList);
 
   // passing movie array to main component
-  // CreateMovieScroll(movieList);
+  CreateMovieScroll(movieList);
 };
 
 MoviesList();

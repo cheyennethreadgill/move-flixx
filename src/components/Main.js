@@ -31,13 +31,13 @@ function CreateMovieScroll(movies) {
 
     const aZContent = aZArray
       .map((movie) => {
-        const { img, rating, title } = movie;
+        const { img, rating, title, popularity } = movie;
         return `
-      <button class="movie">
+      <button class="movie" value=${popularity}>
         <div class="movie-img-container">
           <img
           src=${img}
-          alt="Five Nights" /> 
+          alt=${title} /> 
         </div>
         <div class="movie-text">
           <h3>${title}</h3>
@@ -50,6 +50,7 @@ function CreateMovieScroll(movies) {
     moviesContainer.innerHTML = aZContent;
     movieSection.appendChild(moviesContainer);
     main.appendChild(movieSection);
+
     // *********************************************
 
     // show AZ page
@@ -57,13 +58,13 @@ function CreateMovieScroll(movies) {
     // trigger when see all button is pressed
     function showAZ(movies) {
       const azPageContent = aZArray.map((movie) => {
-        const { img, rating, title } = movie;
+        const { img, rating, title, popularity } = movie;
         return `
-        <button class="movie">
+        <button class="movie" value=${popularity}>
           <div class="movie-img-container">
               <img
               src=${img}
-              alt="Five Nights" /> 
+              alt=${title} /> 
           </div>
          <div class="movie-text">
               <h3>${title}</h3>
@@ -152,7 +153,9 @@ function CreateMovieScroll(movies) {
       .slice(0, 5);
 
     const NewContent = New.map((movie) => {
-      const { img, rating, title, backgroundImg } = movie;
+      const { backgroundImg, img, title, description, ratingCount, rating } =
+        movie;
+
       return `
     <button class="movie">
     <div class="movie-img-container">
@@ -177,13 +180,123 @@ function CreateMovieScroll(movies) {
   const movie = document.querySelectorAll(".movie");
 
   movie.forEach((item) => {
-    item.addEventListener("click", createMoviePage, false);
-  });
+    // console.log(item.value);
+    item.addEventListener(
+      "click",
+      function showMovie() {
+        const itemValue = item.value;
 
-  function createMoviePage() {
-    main.innerHTML = movieContent;
-    console.log("test");
-  }
+        let foundMovie = movies.filter((movie) => {
+          const { popularity } = movie;
+
+          if (popularity == itemValue) {
+            return movie;
+          }
+        });
+        let movie = foundMovie[0];
+        const {
+          backgroundImg,
+          img,
+          title,
+          description,
+          ratingCount,
+          rating,
+          popularity,
+        } = movie;
+
+        const movieContent = `
+      <section class="single-movie">
+        <button class="btn-navigation">
+          <i
+            class="fa-solid fa-chevron-left fa-xl"
+            style="color: #8190eb"
+          ></i>
+        </button>
+
+        <div class="single-movie-img">
+          <img
+            src=${backgroundImg}
+            alt=${title}
+          />
+        </div>
+
+        <div class="single-movie-synopsis">
+          <div class="wrapper">
+            <section class="single-movie-content">
+              <div class="row">
+                <div class="col-2">
+                  <div class="img-container">
+                    <img
+                      src=${img}
+                      alt=${title}
+                    />
+                  </div>
+                </div>
+                <div class="col-10">
+                  <p class="single-movie-ratingcount">40,325</p>
+                  <h1>${title}</h1>
+                  <p class="single-movie-runtime">1 hr 35 min</p>
+                </div>
+              </div>
+
+              <p class="single-movie-description">
+                ${description}
+              </p>
+
+              <h2>Cast</h2>
+            </section>
+            <section class="single-movie-cast">
+              <div class="container">
+                <div class="single-movie-cast-div">
+                  <div class="single-movie-cast-div-member">
+                    <span class="placeholder"></span>
+                    <p class="single-movie-cast-div-member-name">Lorem Ipsum</p>
+                  </div>
+                </div>
+                <div class="single-movie-cast-div">
+                  <div class="single-movie-cast-div-member">
+                    <span class="placeholder"></span>
+                    <p class="single-movie-cast-div-member-name">Lorem Ipsum</p>
+                  </div>
+                </div>
+                <div class="single-movie-cast-div">
+                  <div class="single-movie-cast-div-member">
+                    <span class="placeholder"></span>
+                    <p class="single-movie-cast-div-member-name">Lorem Ipsum</p>
+                  </div>
+                </div>
+                <div class="single-movie-cast-div">
+                  <div class="single-movie-cast-div-member">
+                    <span class="placeholder"></span>
+                    <p class="single-movie-cast-div-member-name">Lorem Ipsum</p>
+                  </div>
+                </div>
+                <div class="single-movie-cast-div">
+                  <div class="single-movie-cast-div-member">
+                    <span class="placeholder"></span>
+                    <p class="single-movie-cast-div-member-name">Lorem Ipsum</p>
+                  </div>
+                </div>
+                <div class="single-movie-cast-div">
+                  <div class="single-movie-cast-div-member">
+                    <span class="placeholder"></span>
+                    <p class="single-movie-cast-div-member-name">Lorem Ipsum</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="container">
+          <button class="btn-primary">Buy Movie</button>
+        </div>
+      </section>
+    `;
+        main.innerHTML = movieContent;
+      },
+      false
+    );
+  });
 }
 
 // Dont need, already rendering in the async function
