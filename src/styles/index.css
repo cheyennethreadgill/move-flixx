@@ -216,7 +216,7 @@ img {
 .single-movie-content {
   background-color: #ffffff;
   color: #292847;
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
 }
