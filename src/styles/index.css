@@ -233,15 +233,18 @@ img {
   background-color: #eceefb;
   color: #292847;
   width: 100%;
+  overflow-x: hidden;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 .single-movie-cast .container {
   display: grid;
   grid-template-columns: repeat(6, 110px);
   grid-template-rows: minmax(50px, auto);
-  overflow-x: scroll;
   padding: 1rem;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
+  overflow-x: auto;
 }
 .single-movie-cast-div {
   width: -moz-fit-content;
