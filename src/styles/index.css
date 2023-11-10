@@ -223,11 +223,20 @@ img {
 .single-movie-content .img-container {
   width: 24vw;
 }
-.single-movie-content h1 {
+.single-movie-content h1,
+.single-movie-content h2 {
   color: #8190eb;
 }
-.single-movie-content h3 {
+.single-movie-content h2 {
   margin: 1.5rem 0 1rem 0;
+}
+.single-movie-ratingcount {
+  font-size: 0.8em;
+  font-weight: 400;
+}
+.single-movie-description, .single-movie-runtime {
+  font-weight: 500;
+  line-height: 24px;
 }
 .single-movie-cast {
   background-color: #eceefb;
@@ -254,6 +263,9 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.single-movie-cast-div-member-name {
+  font-weight: 500;
 }
 .single-movie-cast-div-member .placeholder {
   content: "";
