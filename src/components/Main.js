@@ -35,7 +35,7 @@ function CreateMovieScroll(movies) {
       .map((movie) => {
         const { img, rating, title, popularity } = movie;
         return `
-      <button class="movie" value=${popularity} value=${popularity}>
+      <a class="movie" value=${popularity} value=${popularity}>
         <div class="movie-img-container">
           <img
           src=${img}
@@ -63,7 +63,7 @@ function CreateMovieScroll(movies) {
         const { img, rating, title, popularity } = movie;
         return `
         
-        <button class="movie" value=${popularity} value=${popularity}>
+        <a class="movie" value=${popularity} value=${popularity}>
           <div class="movie-img-container">
               <img
               src=${img}
@@ -110,7 +110,7 @@ function CreateMovieScroll(movies) {
     const CriticallyAcclaimedContent = CriticallyAcclaimed.map((movie) => {
       const { img, rating, title, popularity } = movie;
       return `
-    <button class="movie" value=${popularity}>
+    <a class="movie" value=${popularity}>
       <div class="movie-img-container">
         <img
         src=${img}
@@ -120,7 +120,7 @@ function CreateMovieScroll(movies) {
         <h3>${title}</h3>
         <span class="rating">${rating}</span>
       </div>
-    </button>
+    </a>
     `;
     }).join("");
     moviesContainer.innerHTML = CriticallyAcclaimedContent;
@@ -166,7 +166,7 @@ function CreateMovieScroll(movies) {
       } = movie;
 
       return `
-    <button class="movie" value=${popularity}>
+    <a class="movie" value=${popularity}>
       <div class="movie-img-container">
         <img
         src=${img}
