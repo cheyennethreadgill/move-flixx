@@ -68,6 +68,14 @@ body {
   background-color: #292847;
 }
 
+header {
+  background-color: rgba(58, 58, 99, 0.5294117647);
+  height: 5rem;
+  margin: 0 0 2rem 0;
+  display: block;
+  padding: 1.5em 0;
+}
+
 h1,
 h2,
 h3,
@@ -79,6 +87,8 @@ h4 {
 h1 {
   letter-spacing: 0.7px;
   color: #83cfdf;
+  text-align: center;
+  vertical-align: middle;
 }
 
 button {
@@ -104,15 +114,6 @@ main {
   padding: 0 0.8rem;
 }
 
-header {
-  background-color: rgba(58, 58, 99, 0.5294117647);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5rem;
-  margin: 0 0 2rem 0;
-}
-
 img {
   border-radius: inherit;
   height: 100%;
@@ -126,7 +127,7 @@ img {
 }
 
 .show {
-  display: block;
+  display: inherit;
 }
 
 @media screen and (max-width: 37.5em) {
