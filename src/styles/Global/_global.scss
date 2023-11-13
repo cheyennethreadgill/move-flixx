@@ -79,7 +79,7 @@ h2 {
   color: $color-teal-light;
 }
 h3 {
-  font-weight: 400;
+  font-weight: 100;
 }
 main {
   padding: 0 0.8rem;
@@ -92,11 +92,21 @@ img {
   object-fit: cover;
 }
 
+// -----------------------------------Dynamic Styles
 .hide {
   display: none;
 }
 .show {
   display: block;
+}
+.red {
+  color: #f33b05;
+}
+.orange {
+  color: #d4790e;
+}
+.green {
+  color: #61a823;
 }
 
 // media queries
@@ -112,7 +122,8 @@ img {
     font-size: 1.1rem;
   }
   h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
   }
 }
 

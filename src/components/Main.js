@@ -43,7 +43,7 @@ function CreateMovieScroll(movies) {
         </div>
         <div class="movie-text">
           <h3>${title}</h3>
-          <span class="rating">${rating}</span> 
+          <span class="movie-text-rating">${rating}</span> 
         </div>
       </button>
       `;
@@ -71,7 +71,7 @@ function CreateMovieScroll(movies) {
           </div>
          <div class="movie-text">
               <h3>${title}</h3>
-              <span class="rating">${rating}</span> 
+              <span class="movie-text-rating">${rating}</span> 
               
           </div>
         </button>
@@ -109,6 +109,7 @@ function CreateMovieScroll(movies) {
 
     const CriticallyAcclaimedContent = CriticallyAcclaimed.map((movie) => {
       const { img, rating, title, popularity } = movie;
+
       return `
     <button class="movie" value=${popularity}>
       <div class="movie-img-container">
@@ -118,7 +119,7 @@ function CreateMovieScroll(movies) {
       </div>
       <div class="movie-text">
         <h3>${title}</h3>
-        <span class="rating">${rating}</span>
+        <span class="movie-text-rating">${rating}</span>
       </div>
     </a>
     `;
@@ -174,7 +175,7 @@ function CreateMovieScroll(movies) {
       </div>
       <div class="movie-text">
         <h3>${title}</h3>
-        <span class="rating">${rating}</span>
+        <span class="movie-text-rating">${rating}</span>
       </div>
     </button>
     `;
@@ -243,7 +244,7 @@ function CreateMovieScroll(movies) {
                   </div>
                 </div>
                 <div class="col-10">
-                  <p class="single-movie-ratingcount">40,325</p>
+                  <p class="single-movie-text-ratingcount">40,325</p>
                   <h1>${title}</h1>
                   <p class="single-movie-runtime">1 hr 35 min</p>
                 </div>
@@ -342,6 +343,21 @@ function CreateMovieScroll(movies) {
       },
       false
     );
+
+    // Add rating colors
+    const ratingTags = document.querySelectorAll(".movie-text-rating");
+
+    ratingTags.forEach((tag) => {
+      if (tag.innerHTML >= 7) {
+        tag.classList.add("green");
+      }
+      if ((tag.innerHTML >= 5.4) & (tag.innerHTML <= 7)) {
+        tag.classList.add("orange");
+      }
+      if ((tag.innerHTML >= 0) & (tag.innerHTML <= 5.3)) {
+        tag.classList.add("red");
+      }
+    });
   });
 }
 

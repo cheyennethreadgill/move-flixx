@@ -28,9 +28,18 @@
     }
 
     &-text {
-      padding: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      padding: 0.5rem 0 0.5em 0.5em;
       background-color: $color-dark-blue;
       height: 100%;
+
+      &-rating {
+        background-color: $color-deep-black;
+        padding: 0.5em;
+      }
     }
   }
 }
