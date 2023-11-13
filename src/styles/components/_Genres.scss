@@ -1,7 +1,6 @@
 .movies {
   display: grid;
   grid-template-columns: repeat(5, 33vw);
-  // grid-template-rows: repeat(1, 1fr);
   column-gap: 1.2rem;
   padding: 0 0 0.5rem 0;
   filter: drop-shadow(0 5px 0.3rem rgb(10, 10, 10));
@@ -51,6 +50,12 @@
     .movie {
       &-img-container {
         height: 40vh;
+      }
+
+      &-text {
+        padding: 0.5rem;
+        background-color: $color-dark-blue;
+        height: 14%;
       }
     }
   }
