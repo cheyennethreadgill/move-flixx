@@ -7,7 +7,6 @@
 
   .movie {
     display: grid;
-    grid-template-rows: 11fr 4fr;
     background-color: transparent;
     color: $color-white;
     cursor: pointer;
@@ -41,6 +40,10 @@
   .movies {
     overflow-x: scroll;
     margin: 0 0 2.5rem 0;
+
+    .movie {
+      grid-template-rows: 9fr 3fr;
+    }
   }
 }
 // over ipad
@@ -50,6 +53,7 @@
     margin: 0 0 5rem 0;
 
     .movie {
+      grid-template-rows: 9fr 3fr;
       &-img-container {
         height: 40vh;
       }
@@ -57,7 +61,6 @@
       &-text {
         padding: 0.5rem;
         background-color: $color-dark-blue;
-        // height: 14%;
       }
     }
   }
