@@ -7,12 +7,21 @@ function CreateMovieScroll(movies) {
   const main = document.querySelector("main");
   const header = document.querySelector("header");
   var movieSection;
+  var aZTitle = "A-Z";
+  var CriticallyAcclaimedTitle = "Critically Acclaimed";
+  var NewTitle = "New";
+  var SingleMoviePageTitle = "A-Z";
 
-  AZ(movies, movieSection, main, header);
-  CriticallyAcclaimed(movies, movieSection, main, header);
-  New(movies, movieSection, main, header);
+  AZ(aZTitle, movies, movieSection, main, header);
+  CriticallyAcclaimed(
+    CriticallyAcclaimedTitle,
+    movies,
+    movieSection,
+    main,
+    header
+  );
+  New(NewTitle, movies, movieSection, main, header);
   SingleMoviePage(movies, movieSection, main, header);
-  
 }
 
 // Dont need, already rendering in the async function

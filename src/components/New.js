@@ -1,6 +1,6 @@
 import Movie from "./Movie.js";
 
-function New(movies, movieSection, main, header) {
+function New(NewTitle, movies, movieSection, main, header) {
   // *********************************************
   movieSection = document.createElement("section");
   movieSection.setAttribute("class", "movie-section");
@@ -8,7 +8,7 @@ function New(movies, movieSection, main, header) {
   const dFlex = document.createElement("div");
   dFlex.setAttribute("class", "d-flex");
   dFlex.innerHTML = `
-    <h2>new</h2>
+    <h2>${NewTitle}</h2>
     <button id="new" class="seeAll">See All</button>
   `;
   movieSection.appendChild(dFlex);

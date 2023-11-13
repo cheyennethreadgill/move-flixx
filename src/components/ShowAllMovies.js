@@ -1,26 +1,33 @@
 import Movie from "./Movie.js";
 
 // show AZ page
-function ShowAllMovies(main, aZArray) {
-  const azPageContent = aZArray.map((movie) => {
-    const { img, rating, title, popularity } = movie;
-    return `
+function ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer) {
+  const allMoviesContent = movies
+    .map((movie) => {
+      const { img, rating, title, popularity } = movie;
+      return `
         
         <button class="movie" value=${popularity} value=${popularity}>
-          <div class="movie-img-container">
-              <img
-              src=${img}
-              alt=${title} /> 
-          </div>
-         <div class="movie-text">
-              <h3>${title}</h3>
-              <span class="movie-text-rating">${rating}</span> 
-              
-          </div>
+            <div class="movie-img-container">
+                <img
+                src=${img}
+                alt=${title} /> 
+            </div>
+            <div class="movie-text">
+                <h3>${title}</h3>
+                <span class="movie-text-rating">${rating}</span> 
+            </div>
         </button>
         `;
-  });
-  main.innerHTML = azPageContent;
+    })
+    .join("");
+
+  main.innerHTML = allMoviesContent;
+  main.style.display = "grid";
+  main.style.gridTemplateColumns = "repeat(6, 1fr)";
+  main.style.gap = "2em";
+  main.style.padding = "0 7.8rem";
+  main.classList.add("movies");
 }
 
 export default ShowAllMovies;

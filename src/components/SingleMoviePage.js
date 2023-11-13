@@ -16,12 +16,7 @@ function SingleMoviePage(movies, movieSection, main, header) {
           }
         });
         let movie = foundMovie[0];
-        const {
-          backgroundImg,
-          img,
-          title,
-          description,
-        } = movie;
+        const { backgroundImg, img, title, description } = movie;
 
         const movieContentSection = document.createElement("section");
         const movieContent = `
@@ -136,7 +131,6 @@ function SingleMoviePage(movies, movieSection, main, header) {
           button.addEventListener(
             "click",
             () => {
-              console.log("work");
               document.querySelectorAll(".movie-section").forEach((section) => {
                 section.classList.remove("hide");
                 section.classList.add("show");

@@ -2,7 +2,7 @@ import Movie from "./Movie.js";
 import ShowAllMovies from "./ShowAllMovies.js";
 
 // create az section
-function AZ(movies, movieSection, main, header) {
+function AZ(aZTitle, movies, movieSection, main, header) {
   // *********************************************
   movieSection = document.createElement("section");
   movieSection.setAttribute("class", "movie-section");
@@ -10,7 +10,7 @@ function AZ(movies, movieSection, main, header) {
   const dFlex = document.createElement("div");
   dFlex.setAttribute("class", "d-flex");
   dFlex.innerHTML = `
-    <h2>A-Z</h2>
+    <h2>${aZTitle}</h2>
     <button id="a-z" class="seeAll">See All</button>
   `;
   movieSection.appendChild(dFlex);
@@ -39,11 +39,12 @@ function AZ(movies, movieSection, main, header) {
 
   // *********************************************
 
-  const seeAllBtn = document.getElementById("a-z");
+  const seeAllBtn = document.querySelector(".seeAll");
   seeAllBtn.addEventListener(
     "click",
     () => {
-      ShowAllMovies(main, aZArray);
+      seeAllBtn.classList.add("hide");
+      ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer);
     },
     false
   );

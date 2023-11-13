@@ -1,6 +1,13 @@
 import Movie from "./Movie.js";
+import ShowAllMovies from './ShowAllMovies.js';
 
-function CriticallyAcclaimed(movies, movieSection, main, header) {
+function CriticallyAcclaimed(
+  CriticallyAcclaimedTitle,
+  movies,
+  movieSection,
+  main,
+  header
+) {
   // *********************************************
   movieSection = document.createElement("section");
   movieSection.setAttribute("class", "movie-section");
@@ -8,7 +15,7 @@ function CriticallyAcclaimed(movies, movieSection, main, header) {
   const dFlex = document.createElement("div");
   dFlex.setAttribute("class", "d-flex");
   dFlex.innerHTML = `
-    <h2>Critically Acclaimed</h2>
+    <h2>${CriticallyAcclaimedTitle}</h2>
     <button id="critically-acclaimed" class="seeAll">See All</button>
   `;
   movieSection.appendChild(dFlex);
@@ -32,6 +39,8 @@ function CriticallyAcclaimed(movies, movieSection, main, header) {
   moviesContainer.innerHTML = CriticallyAcclaimedContent;
   movieSection.appendChild(moviesContainer);
   main.appendChild(movieSection);
+
+ 
 }
 
 export default CriticallyAcclaimed;
