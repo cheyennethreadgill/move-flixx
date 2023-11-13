@@ -1,4 +1,5 @@
 import Movie from "./Movie.js";
+import ShowAllMovies from "./ShowAllMovies.js";
 
 // create az section
 function AZ(movies, movieSection, main, header) {
@@ -38,30 +39,14 @@ function AZ(movies, movieSection, main, header) {
 
   // *********************************************
 
-  // show AZ page
-  document.getElementById("a-z").addEventListener("click", showAZ, false);
-  // trigger when see all button is pressed
-  function showAZ(movies) {
-    const azPageContent = aZArray.map((movie) => {
-      const { img, rating, title, popularity } = movie;
-      return `
-        
-        <button class="movie" value=${popularity} value=${popularity}>
-          <div class="movie-img-container">
-              <img
-              src=${img}
-              alt=${title} /> 
-          </div>
-         <div class="movie-text">
-              <h3>${title}</h3>
-              <span class="movie-text-rating">${rating}</span> 
-              
-          </div>
-        </button>
-        `;
-    });
-    main.innerHTML = azPageContent;
-  }
+  const seeAllBtn = document.getElementById("a-z");
+  seeAllBtn.addEventListener(
+    "click",
+    () => {
+      ShowAllMovies(main, aZArray);
+    },
+    false
+  );
 }
 
 export default AZ;

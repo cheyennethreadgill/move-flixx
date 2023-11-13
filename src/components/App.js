@@ -12,6 +12,7 @@ function CreateMovieScroll(movies) {
   CriticallyAcclaimed(movies, movieSection, main, header);
   New(movies, movieSection, main, header);
   SingleMoviePage(movies, movieSection, main, header);
+  
 }
 
 // Dont need, already rendering in the async function
