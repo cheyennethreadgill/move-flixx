@@ -211,7 +211,7 @@ img {
     margin: 0 0 2.5rem 0;
   }
   .movies .movie {
-    grid-template-rows: 9fr 3fr;
+    grid-template-rows: 6fr 4fr;
   }
 }
 @media screen and (min-width: 37.5em) {
