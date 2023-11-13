@@ -24,10 +24,10 @@ function ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer) {
 
   main.innerHTML = allMoviesContent;
   main.style.display = "grid";
-  main.style.gridTemplateColumns = "repeat(6, 1fr)";
-  main.style.gap = "2em";
-  main.style.padding = "0 7.8rem";
-  main.classList.add("movies");
+  //   main.style.gridTemplateColumns = "repeat(6, 1fr)";
+  //   main.style.gap = "2em";
+  //   main.style.padding = "0 7.8rem";
+  //   main.classList.add("movies");
 
   // Add rating
   const ratingTags = document.querySelectorAll(".movie-text-rating");
