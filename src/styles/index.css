@@ -127,7 +127,7 @@ img {
 }
 
 .show {
-  display: inherit;
+  display: block;
 }
 
 @media screen and (max-width: 37.5em) {
