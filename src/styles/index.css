@@ -164,9 +164,10 @@ img {
 }
 .movies {
   display: grid;
-  grid-template-columns: repeat(5, 33vw);
-  -moz-column-gap: 1.2rem;
-       column-gap: 1.2rem;
+  grid-template-columns: repeat(5, 41vw);
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  padding: 0 0 0.5rem;
   padding: 0 0 0.5rem 0;
   filter: drop-shadow(0 5px 0.3rem rgb(10, 10, 10));
 }
