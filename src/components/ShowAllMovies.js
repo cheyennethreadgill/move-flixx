@@ -28,6 +28,21 @@ function ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer) {
   main.style.gap = "2em";
   main.style.padding = "0 7.8rem";
   main.classList.add("movies");
+
+  // Add rating
+  const ratingTags = document.querySelectorAll(".movie-text-rating");
+
+  ratingTags.forEach((tag) => {
+    if (tag.innerHTML >= 7) {
+      tag.classList.add("green");
+    }
+    if ((tag.innerHTML >= 5.4) & (tag.innerHTML <= 7)) {
+      tag.classList.add("orange");
+    }
+    if ((tag.innerHTML >= 0) & (tag.innerHTML <= 5.3)) {
+      tag.classList.add("red");
+    }
+  });
 }
 
 export default ShowAllMovies;
