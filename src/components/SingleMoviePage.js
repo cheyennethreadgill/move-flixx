@@ -21,9 +21,6 @@ function SingleMoviePage(movies, movieSection, main, header) {
           img,
           title,
           description,
-          ratingCount,
-          rating,
-          popularity,
         } = movie;
 
         const movieContentSection = document.createElement("section");
