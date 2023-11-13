@@ -1,4 +1,4 @@
-import CreateMovieScroll from "./src/components/Main.js";
+import App from "./src/components/App.js";
 
 const MoviesList = async function () {
   const API_URL =
@@ -26,11 +26,11 @@ const MoviesList = async function () {
     return movieData;
   });
 
-  console.log(moviesGrab);
-  console.log(movieList);
+  // console.log(moviesGrab);
+  // console.log(movieList);
 
   // passing movie array to main component
-  CreateMovieScroll(movieList);
+  App(movieList);
 };
 
 MoviesList();
