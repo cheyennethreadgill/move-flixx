@@ -5,10 +5,10 @@
 .single-movie {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   height: 100vh;
   gap: 1rem;
-  margin: 8em 0 2em 0;
+  margin: 12em 0 0 0;
 
   .wrapper {
     display: flex;
