@@ -29,7 +29,7 @@ function CreateMovieScroll(movies) {
           return movie;
         }
       })
-      .slice(0, 5);
+      .slice(0, 6);
 
     const aZContent = aZArray
       .map((movie) => {
@@ -105,7 +105,7 @@ function CreateMovieScroll(movies) {
           return movie;
         }
       })
-      .slice(0, 5);
+      .slice(0, 6);
 
     const CriticallyAcclaimedContent = CriticallyAcclaimed.map((movie) => {
       const { img, rating, title, popularity } = movie;
@@ -153,7 +153,7 @@ function CreateMovieScroll(movies) {
           return movie;
         }
       })
-      .slice(0, 5);
+      .slice(0, 6);
 
     const NewContent = New.map((movie) => {
       const {

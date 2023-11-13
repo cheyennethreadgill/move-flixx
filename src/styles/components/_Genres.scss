@@ -1,6 +1,6 @@
 .movies {
   display: grid;
-  grid-template-columns: repeat(5, 41vw);
+  grid-template-columns: repeat(6, 41vw);
   column-gap: 1rem;
   padding: 0 0 0.5rem;
   padding: 0 0 0.5rem 0;
@@ -59,8 +59,9 @@
 // over ipad
 @media screen and (min-width: 37.5em) {
   .movies {
-    grid-template-columns: repeat(5, 283px);
+    grid-template-columns: repeat(6, 283px);
     margin: 0 0 5rem 0;
+    justify-content: center;
 
     .movie {
       grid-template-rows: 9fr 3fr;
