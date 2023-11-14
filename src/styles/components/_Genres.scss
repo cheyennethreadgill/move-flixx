@@ -49,6 +49,7 @@
   }
 }
 
+// Queries
 // under ipad
 @media screen and (max-width: 37.5em) {
   .movies {
@@ -60,8 +61,20 @@
     }
   }
 }
+
+// over phone under ipad
+@media screen and (max-width: 120em) {
+  .movie-section {
+    margin-bottom: 3.5rem;
+  }
+  .movies {
+    grid-template-columns: repeat(4, 283px);
+    row-gap: 2em;
+  }
+}
+
 // over ipad
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 125em) {
   .movies {
     grid-template-columns: repeat(6, 283px);
     margin: 0 0 5rem 0;

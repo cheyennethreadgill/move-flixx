@@ -1,3 +1,5 @@
+import CreateMovieScroll from "./App.js";
+import CriticallyAcclaimed from "./CriticallyAcclaimed.js";
 import Movie from "./Movie.js";
 
 function SearchInput(
