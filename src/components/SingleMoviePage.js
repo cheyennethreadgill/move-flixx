@@ -1,4 +1,4 @@
-function SingleMoviePage(movies, movieSection, main, header) {
+function SingleMoviePage(movies, movieSection, main, header, input) {
   const movie = document.querySelectorAll(".movie");
 
   // SHOW SINGLE MOVIE PAGE
@@ -114,6 +114,7 @@ function SingleMoviePage(movies, movieSection, main, header) {
         document.querySelectorAll(".movie-section").forEach((section) => {
           section.classList.add("hide");
           header.classList.add("hide");
+          input.classList.add("hide");
 
           if (section.classList.contains("show")) {
             header.classList.add("hide");

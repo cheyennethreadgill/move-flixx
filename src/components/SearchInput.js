@@ -2,7 +2,8 @@ import CreateMovieScroll from "./App.js";
 import CriticallyAcclaimed from "./CriticallyAcclaimed.js";
 import Movie from "./Movie.js";
 
-function SearchInput(
+function SearchInput (
+  input,
   moviesContainer,
   body,
   aZTitle,
@@ -11,8 +12,6 @@ function SearchInput(
   main,
   header
 ) {
-  // get input value
-  const input = document.querySelector("#search-input");
 
   input.addEventListener(
     "keyup",
