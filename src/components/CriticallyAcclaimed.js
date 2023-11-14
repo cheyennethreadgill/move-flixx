@@ -1,5 +1,5 @@
 import Movie from "./Movie.js";
-import ShowAllMovies from './ShowAllMovies.js';
+import ShowAllMovies from "./ShowAllMovies.js";
 
 function CriticallyAcclaimed(
   CriticallyAcclaimedTitle,
@@ -39,8 +39,6 @@ function CriticallyAcclaimed(
   moviesContainer.innerHTML = CriticallyAcclaimedContent;
   movieSection.appendChild(moviesContainer);
   main.appendChild(movieSection);
-
- 
 }
 
 export default CriticallyAcclaimed;
