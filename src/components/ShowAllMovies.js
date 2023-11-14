@@ -9,7 +9,10 @@ function ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer) {
     })
     .join("");
 
+  // remove children of main section
   main.replaceChildren();
+
+  // inject new content
   moviesContainer.innerHTML = allMoviesContent;
   main.appendChild(moviesContainer);
 
