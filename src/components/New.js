@@ -1,4 +1,5 @@
 import Movie from "./Movie.js";
+import ShowAllMovies from "./ShowAllMovies.js";
 
 function New(NewTitle, movies, movieSection, main, header) {
   // *********************************************
@@ -26,12 +27,30 @@ function New(NewTitle, movies, movieSection, main, header) {
     })
     .slice(0, 6);
 
+  const NewAll = movies.filter((movie) => {
+    if (movie.ratingCount >= 1800) {
+      return movie;
+    }
+  });
+
   const NewContent = New.map((movie) => {
     return Movie(movie);
   }).join("");
   moviesContainer.innerHTML = NewContent;
   movieSection.appendChild(moviesContainer);
   main.appendChild(movieSection);
+
+  // *********************************************
+  // see all
+  const seeAllBtn = document.querySelector("#new");
+  seeAllBtn.addEventListener(
+    "click",
+    () => {
+      seeAllBtn.classList.add("hide");
+      new ShowAllMovies(seeAllBtn, NewAll, main, movieSection, moviesContainer);
+    },
+    false
+  );
 }
 
 export default New;

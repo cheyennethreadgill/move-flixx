@@ -2,6 +2,13 @@ import Movie from "./Movie.js";
 
 // show AZ page
 function ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer) {
+  {
+    this.seeAllBtn = seeAllBtn;
+    this.movies = movies;
+    this.main = main;
+    this.movieSection = movieSection;
+  }
+
   const allMoviesContent = movies
     .map((movie) => {
       const { img, rating, title, popularity } = movie;
@@ -18,7 +25,6 @@ function ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer) {
 
   // Add rating
   const ratingTags = document.querySelectorAll(".movie-text-rating");
-
   ratingTags.forEach((tag) => {
     if (tag.innerHTML >= 7) {
       tag.classList.add("green");

@@ -32,6 +32,11 @@ function CriticallyAcclaimed(
       }
     })
     .slice(0, 6);
+  const CriticallyAcclaimedMoviesAll = movies.filter((movie) => {
+    if (movie.popularity <= 1000) {
+      return movie;
+    }
+  });
 
   const CriticallyAcclaimedContent = CriticallyAcclaimedMovies.map((movie) => {
     return Movie(movie);
@@ -39,6 +44,24 @@ function CriticallyAcclaimed(
   moviesContainer.innerHTML = CriticallyAcclaimedContent;
   movieSection.appendChild(moviesContainer);
   main.appendChild(movieSection);
+
+  // *********************************************
+  // see all
+  const seeAllBtn = document.querySelector("#critically-acclaimed");
+  seeAllBtn.addEventListener(
+    "click",
+    () => {
+      seeAllBtn.classList.add("hide");
+      new ShowAllMovies(
+        seeAllBtn,
+        CriticallyAcclaimedMoviesAll,
+        main,
+        movieSection,
+        moviesContainer
+      );
+    },
+    false
+  );
 }
 
 export default CriticallyAcclaimed;

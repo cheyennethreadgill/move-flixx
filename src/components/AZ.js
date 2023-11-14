@@ -38,13 +38,13 @@ function AZ(aZTitle, movies, movieSection, main, header) {
   main.appendChild(movieSection);
 
   // *********************************************
-
-  const seeAllBtn = document.querySelector(".seeAll");
+  // see all
+  const seeAllBtn = document.querySelector("#a-z");
   seeAllBtn.addEventListener(
     "click",
     () => {
       seeAllBtn.classList.add("hide");
-      ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer);
+      new ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer);
     },
     false
   );
