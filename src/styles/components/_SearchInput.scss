@@ -1,0 +1,17 @@
+#search-input {
+  width: 100%;
+  padding: 1em;
+  margin: 0 0 2em 0;
+  border-radius: 10em;
+  background-color: transparent;
+  border: solid 2px $color-periwinkle;
+  color: $color-white;
+
+  &:focus-visible {
+    outline: none;
+  }
+  &::placeholder {
+    font-size: 1.2em;
+    color: $color-periwinkle;
+  }
+}

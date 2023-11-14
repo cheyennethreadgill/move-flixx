@@ -2,16 +2,22 @@ import AZ from "./AZ.js";
 import CriticallyAcclaimed from "./CriticallyAcclaimed.js";
 import New from "./New.js";
 import SingleMoviePage from "./SingleMoviePage.js";
+import SearchInput from "./SearchInput.js";
 
 function CreateMovieScroll(movies) {
   const main = document.querySelector("main");
   const header = document.querySelector("header");
+  const body = document.querySelector("body");
+
+  const moviesContainer = document.createElement("section");
+  moviesContainer.setAttribute("class", "a-z");
+  moviesContainer.setAttribute("class", "movies");
   var movieSection;
   var aZTitle = "A-Z";
   var CriticallyAcclaimedTitle = "Critically Acclaimed";
   var NewTitle = "New";
-  var SingleMoviePageTitle = "A-Z";
 
+  SearchInput(moviesContainer, body, aZTitle, movies, movieSection, main, header);
   AZ(aZTitle, movies, movieSection, main, header);
   CriticallyAcclaimed(
     CriticallyAcclaimedTitle,

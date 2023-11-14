@@ -329,4 +329,25 @@ img {
   border-radius: 10rem;
   width: 4rem;
   height: 4rem;
+}
+
+#search-input {
+  width: 100%;
+  padding: 1em;
+  margin: 0 0 2em 0;
+  border-radius: 10em;
+  background-color: transparent;
+  border: solid 2px #8190eb;
+  color: #ffffff;
+}
+#search-input:focus-visible {
+  outline: none;
+}
+#search-input::-moz-placeholder {
+  font-size: 1.2em;
+  color: #8190eb;
+}
+#search-input::placeholder {
+  font-size: 1.2em;
+  color: #8190eb;
 }/*# sourceMappingURL=index.css.map */
