@@ -18,6 +18,7 @@ function ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer) {
 
   // remove children of main section
   main.replaceChildren();
+  moviesContainer.style.rowGap = '2em'
 
   // inject new content
   moviesContainer.innerHTML = allMoviesContent;
