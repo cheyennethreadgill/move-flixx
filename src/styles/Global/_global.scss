@@ -19,8 +19,8 @@ body {
 
 header {
   background-color: $color-dark-blue;
-  height: 5rem;
-  margin: 0 0 2rem 0;
+  height: 5em;
+  margin: 0 0 2em 0;
   display: block;
   padding: 1.5em 0;
 }
@@ -36,7 +36,6 @@ h4 {
 h1 {
   letter-spacing: 0.7px;
   color: $color-teal;
-  text-align: center;
   vertical-align: middle;
 }
 
@@ -52,7 +51,7 @@ h3 {
   font-weight: 200;
 }
 main {
-  padding: 0 0.8rem;
+  padding: 0 0.8em;
 }
 
 img {
@@ -69,31 +68,47 @@ button {
   color: $color-periwinkle;
   cursor: pointer;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 
 // Global media queries
-// under ipad
-@media screen and (max-width: 37.5em) {
+
+// queries
+// phone
+@media screen and (min-width: 200px) {
+}
+// ipad & down
+@media screen and (max-width: 600px) {
   .container {
-    padding: 0 0.8rem;
+    padding: 0 0.8em;
   }
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
   h2 {
-    font-size: 1.1rem;
+    font-size: 1.1em;
   }
   h3 {
-    font-size: 0.9rem;
+    font-size: 0.9em;
     letter-spacing: 0.5px;
   }
 }
 
-// over ipad
-@media screen and (min-width: 96em) {
+// ipad & up
+@media screen and (min-width: 600px) {
   main,
   .container {
-    padding: 0 7.8rem;
+    padding: 0 7.8em;
   }
+
+  h1 {
+    font-size: 2em;
+  }
+}
+
+// laptop
+@media screen and (min-width: 1024px) {
+}
+// desktop
+@media screen and (min-width: 1920px) {
 }

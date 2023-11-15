@@ -41,6 +41,10 @@ col-10 {
   width: 83.33%;
 }
 
+col-lg-12 {
+  width: 100%;
+}
+
 .hide {
   display: none;
 }
@@ -83,8 +87,8 @@ body {
 
 header {
   background-color: rgba(58, 58, 99, 0.5294117647);
-  height: 5rem;
-  margin: 0 0 2rem 0;
+  height: 5em;
+  margin: 0 0 2em 0;
   display: block;
   padding: 1.5em 0;
 }
@@ -100,7 +104,6 @@ h4 {
 h1 {
   letter-spacing: 0.7px;
   color: #83cfdf;
-  text-align: center;
   vertical-align: middle;
 }
 
@@ -119,7 +122,7 @@ h3 {
 }
 
 main {
-  padding: 0 0.8rem;
+  padding: 0 0.8em;
 }
 
 img {
@@ -136,28 +139,31 @@ button {
   color: #8190eb;
   cursor: pointer;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 
-@media screen and (max-width: 37.5em) {
+@media screen and (max-width: 600px) {
   .container {
-    padding: 0 0.8rem;
+    padding: 0 0.8em;
   }
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
   h2 {
-    font-size: 1.1rem;
+    font-size: 1.1em;
   }
   h3 {
-    font-size: 0.9rem;
+    font-size: 0.9em;
     letter-spacing: 0.5px;
   }
 }
-@media screen and (min-width: 96em) {
+@media screen and (min-width: 600px) {
   main,
   .container {
-    padding: 0 7.8rem;
+    padding: 0 7.8em;
+  }
+  h1 {
+    font-size: 2em;
   }
 }
 .movies_container {
@@ -271,6 +277,9 @@ button {
   width: 97%;
   margin: 0 auto;
 }
+.single-movie-synopsis-btn {
+  margin: 1em 0 0 0;
+}
 .single-movie-img {
   position: fixed;
   top: 0;
@@ -302,18 +311,34 @@ button {
 .single-movie-content h1,
 .single-movie-content h2 {
   color: #8190eb;
-  line-height: 25px;
+  line-height: 32px;
 }
 .single-movie-content h2 {
   margin: 1.5rem 0 1rem 0;
 }
+.single-movie-rating-container {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin: 0 0 0.7em 0;
+}
+.single-movie-rating {
+  background-color: #8190eb;
+  background-color: #8190eb;
+  padding: 1em;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10em;
+  font-weight: 700;
+  color: white;
+}
 .single-movie-ratingcount {
-  font-size: 0.8em;
-  font-weight: 400;
+  font-weight: 300;
 }
 .single-movie-description, .single-movie-runtime {
   font-weight: 500;
   line-height: 24px;
+  font-size: 1.1em;
 }
 .single-movie-cast {
   background-color: #eceefb;
@@ -350,6 +375,24 @@ button {
   height: 4rem;
 }
 
+@media screen and (min-width: 600px) {
+  .single-movie .wrapper {
+    width: 717px;
+  }
+  .single-movie-img::after {
+    background-image: linear-gradient(to top, #292847 58.3%, transparent 91%);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .single-movie-img::after {
+    background-image: linear-gradient(to top, #292847 33.3%, transparent 80%);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .single-movie .wrapper {
+    width: 1037px;
+  }
+}
 #search-input {
   width: 100%;
   padding: 1em;

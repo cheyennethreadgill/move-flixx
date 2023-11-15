@@ -4,7 +4,7 @@ import CriticallyAcclaimed from "./CriticallyAcclaimed.js";
 import New from "./New.js";
 import SingleMoviePage from "./SingleMoviePage.js";
 
-function CreateMovieScroll(movies) {
+function App(movies) {
   const html = String.raw;
 
   const main = document.querySelector("main");
@@ -12,15 +12,18 @@ function CreateMovieScroll(movies) {
   const body = document.querySelector("body");
   const input = document.querySelector("#search-input");
 
-  const moviesContainer = document.createElement("section");
-  moviesContainer.setAttribute("class", "movies_container");
   var CriticallyAcclaimedTitle = "Critically Acclaimed";
   var aZTitle = "A-Z";
   var NewTitle = "New";
   var movieSection;
 
+  const moviesContainer = document.createElement("section");
+  moviesContainer.setAttribute("class", "movies_container");
+
   SearchInput(input, moviesContainer, movies, main);
+
   AZ(aZTitle, movies, movieSection, main, header);
+
   CriticallyAcclaimed(
     CriticallyAcclaimedTitle,
     movies,
@@ -29,6 +32,7 @@ function CreateMovieScroll(movies) {
     header
   );
   New(NewTitle, movies, movieSection, main, header);
+
   SingleMoviePage(movies, movieSection, main, header, input, html);
 
   // Add rating colors after movies are rendered
@@ -48,6 +52,6 @@ function CreateMovieScroll(movies) {
 }
 
 // Dont need, already rendering in the async function
-//    CreateMovieScroll();
+//    App();
 
-export default CreateMovieScroll;
+export default App;

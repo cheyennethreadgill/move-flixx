@@ -16,7 +16,7 @@ function SingleMoviePage(movies, movieSection, main, header, input, html) {
           }
         });
         let movie = foundMovie[0];
-        const { backgroundImg, img, title, description } = movie;
+        const { backgroundImg, img, title, description, rating } = movie;
 
         const movieContentSection = document.createElement("section");
         const movieContent = html`
@@ -42,7 +42,10 @@ function SingleMoviePage(movies, movieSection, main, header, input, html) {
                       </div>
                     </div>
                     <div class="col-10">
-                      <p class="single-movie-text-ratingcount">40,325</p>
+                      <div class="single-movie-rating-container">
+                        <p class="single-movie-rating">${rating}</p>
+                        <p class="single-movie-ratingcount">40,325</p>
+                      </div>
                       <h1>${title}</h1>
                       <p class="single-movie-runtime">1 hr 35 min</p>
                     </div>
@@ -52,6 +55,7 @@ function SingleMoviePage(movies, movieSection, main, header, input, html) {
 
                   <h2>Cast</h2>
                 </section>
+
                 <section class="single-movie-cast">
                   <div class="container">
                     <div class="single-movie-cast-div">
@@ -104,9 +108,11 @@ function SingleMoviePage(movies, movieSection, main, header, input, html) {
                     </div>
                   </div>
                 </section>
+                <button class="btn-primary single-movie-synopsis-btn">
+                  Buy Movie
+                </button>
               </div>
             </div>
-            <button class="btn-primary">Buy Movie</button>
           </section>
         `;
         movieContentSection.innerHTML = movieContent;
