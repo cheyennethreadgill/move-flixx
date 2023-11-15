@@ -5,8 +5,7 @@ function CriticallyAcclaimed(
   CriticallyAcclaimedTitle,
   movies,
   movieSection,
-  main,
-  header
+  main
 ) {
   // *********************************************
   movieSection = document.createElement("section");

@@ -13,10 +13,10 @@ function CreateMovieScroll(movies) {
   const moviesContainer = document.createElement("section");
   moviesContainer.setAttribute("class", "a-z");
   moviesContainer.setAttribute("class", "movies");
-  var movieSection;
-  var aZTitle = "A-Z";
   var CriticallyAcclaimedTitle = "Critically Acclaimed";
+  var aZTitle = "A-Z";
   var NewTitle = "New";
+  var movieSection;
 
   SearchInput(
     input,

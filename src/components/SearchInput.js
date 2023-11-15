@@ -1,17 +1,6 @@
-import CreateMovieScroll from "./App.js";
-import CriticallyAcclaimed from "./CriticallyAcclaimed.js";
 import Movie from "./Movie.js";
 
-function SearchInput(
-  input,
-  moviesContainer,
-  body,
-  aZTitle,
-  movies,
-  movieSection,
-  main,
-  header
-) {
+function SearchInput(input, moviesContainer, movies, main) {
   input.addEventListener(
     "keyup",
     function captureInput(e) {
