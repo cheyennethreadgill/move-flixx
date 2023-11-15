@@ -16,7 +16,7 @@ function New(NewTitle, movies, movieSection, main, header) {
 
   const moviesContainer = document.createElement("section");
   moviesContainer.setAttribute("class", "new");
-  moviesContainer.setAttribute("class", "movies-container");
+  moviesContainer.setAttribute("class", "movies_container");
 
   // New
   const New = movies
@@ -33,9 +33,12 @@ function New(NewTitle, movies, movieSection, main, header) {
     }
   });
 
-  const NewContent = New.map((movie) => {
+  const NewContent = New.map( ( movie ) => {
+    
+    console.log(movie);
     return Movie(movie);
   }).join("");
+
   moviesContainer.innerHTML = NewContent;
   movieSection.appendChild(moviesContainer);
   main.appendChild(movieSection);

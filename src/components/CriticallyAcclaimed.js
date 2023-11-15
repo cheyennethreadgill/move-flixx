@@ -21,7 +21,7 @@ function CriticallyAcclaimed(
 
   const moviesContainer = document.createElement("section");
   moviesContainer.setAttribute("class", "critically-acclaimed");
-  moviesContainer.setAttribute("class", "movies-container");
+  moviesContainer.setAttribute("class", "movies_container");
 
   // CriticallyAcclaimed Movies
   const CriticallyAcclaimedMovies = movies
@@ -39,7 +39,9 @@ function CriticallyAcclaimed(
 
   const CriticallyAcclaimedContent = CriticallyAcclaimedMovies.map((movie) => {
     return Movie(movie);
-  }).join("");
+  } ).join( "" );
+  
+
   moviesContainer.innerHTML = CriticallyAcclaimedContent;
   movieSection.appendChild(moviesContainer);
   main.appendChild(movieSection);

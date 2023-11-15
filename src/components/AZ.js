@@ -17,7 +17,7 @@ function AZ(aZTitle, movies, movieSection, main, header) {
 
   const moviesContainer = document.createElement("section");
   moviesContainer.setAttribute("class", "a-z");
-  moviesContainer.setAttribute("class", "movies-container");
+  moviesContainer.setAttribute("class", "movies_container");
 
   // a-z
   const aZArray = movies
@@ -32,7 +32,8 @@ function AZ(aZTitle, movies, movieSection, main, header) {
     .map((movie) => {
       return Movie(movie);
     })
-    .join("");
+    .join( "" );
+  
   moviesContainer.innerHTML = aZContent;
   movieSection.appendChild(moviesContainer);
   main.appendChild(movieSection);

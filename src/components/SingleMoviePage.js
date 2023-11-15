@@ -1,6 +1,6 @@
-function SingleMoviePage(movies, movieSection, main, header, input) {
-  const movie = document.querySelectorAll(".movies-movie");
-  const html = String.raw;
+function SingleMoviePage(movies, movieSection, main, header, input, html) {
+  const movie = document.querySelectorAll(".movies_movie");
+
   // SHOW SINGLE MOVIE PAGE
   movie.forEach((item) => {
     item.addEventListener(

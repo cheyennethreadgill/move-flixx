@@ -25,7 +25,7 @@ function ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer) {
   main.appendChild(moviesContainer);
 
   // Add rating
-  const ratingTags = document.querySelectorAll(".movies-movie-text-rating");
+  const ratingTags = document.querySelectorAll(".movies_movie_text-rating");
   ratingTags.forEach((tag) => {
     if (tag.innerHTML >= 7) {
       tag.classList.add("green");
