@@ -2,7 +2,7 @@ function Movie(movie) {
   const { img, rating, title, popularity } = movie;
 
   // Add rating colors
-  const ratingTags = document.querySelectorAll(".movie-text-rating");
+  const ratingTags = document.querySelectorAll(".movies-movie-text-rating");
 
   ratingTags.forEach((tag) => {
     if (tag.innerHTML >= 7) {
@@ -17,15 +17,15 @@ function Movie(movie) {
   });
 
   return `
-      <button class="movie" value=${popularity} value=${popularity}>
-        <div class="movie-img-container">
+      <button class="movies-movie" value=${popularity} value=${popularity}>
+        <div class="movies-movie-img-container">
           <img
           src=${img}
           alt=${title} /> 
         </div>
-        <div class="movie-text">
+        <div class="movies-movie-text">
           <h3>${title}</h3>
-          <span class="movie-text-rating">${rating}</span> 
+          <span class="movies-movie-text-rating">${rating}</span> 
         </div>
       </button>
       `;

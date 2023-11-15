@@ -1,8 +1,8 @@
+import SearchInput from "./SearchInput.js";
 import AZ from "./AZ.js";
 import CriticallyAcclaimed from "./CriticallyAcclaimed.js";
 import New from "./New.js";
 import SingleMoviePage from "./SingleMoviePage.js";
-import SearchInput from "./SearchInput.js";
 
 function CreateMovieScroll(movies) {
   const main = document.querySelector("main");
@@ -12,7 +12,7 @@ function CreateMovieScroll(movies) {
 
   const moviesContainer = document.createElement("section");
   moviesContainer.setAttribute("class", "a-z");
-  moviesContainer.setAttribute("class", "movies");
+  moviesContainer.setAttribute("class", "movies-container");
   var CriticallyAcclaimedTitle = "Critically Acclaimed";
   var aZTitle = "A-Z";
   var NewTitle = "New";

@@ -16,7 +16,7 @@ function New(NewTitle, movies, movieSection, main, header) {
 
   const moviesContainer = document.createElement("section");
   moviesContainer.setAttribute("class", "new");
-  moviesContainer.setAttribute("class", "movies");
+  moviesContainer.setAttribute("class", "movies-container");
 
   // New
   const New = movies

@@ -21,7 +21,7 @@ function CriticallyAcclaimed(
 
   const moviesContainer = document.createElement("section");
   moviesContainer.setAttribute("class", "critically-acclaimed");
-  moviesContainer.setAttribute("class", "movies");
+  moviesContainer.setAttribute("class", "movies-container");
 
   // CriticallyAcclaimed Movies
   const CriticallyAcclaimedMovies = movies

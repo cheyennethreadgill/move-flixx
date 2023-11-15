@@ -1,16 +1,18 @@
 .movies {
-  display: grid;
-  column-gap: 1em;
-  row-gap: 2em;
-  margin: 0 0 2em 0;
-  padding: 0 0 0.5em;
-  filter: drop-shadow(0 5px 0.3em rgb(10, 10, 10));
+  &-container {
+    display: grid;
+    column-gap: 1em;
+    row-gap: 2em;
+    margin: 0 0 2em 0;
+    padding: 0 0 0.5em;
+    filter: drop-shadow(0 5px 0.3em rgb(10, 10, 10));
 
-  &::-webkit-scrollbar {
-    display: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
-  .movie {
+  &-movie {
     display: grid;
     background-color: transparent;
     color: $color-white;
@@ -33,7 +35,6 @@
         object-fit: cover;
       }
     }
-
     &-text {
       display: flex;
       justify-content: space-between;
@@ -54,33 +55,38 @@
 // phone
 @media screen and (min-width: 200px) {
   .movies {
-    grid-template-columns: repeat(6, 153px);
-    overflow-x: scroll;
+    &-container {
+      grid-template-columns: repeat(6, 153px);
+      overflow-x: scroll;
+    }
   }
 }
 
 // ipad
 @media screen and (min-width: 600px) {
   .movies {
-    grid-template-columns: repeat(4, 283px);
-    overflow-x: scroll;
+    .movies-container {
+      grid-template-columns: repeat(4, 283px);
+      overflow-x: scroll;
+    }
   }
 }
 
 // laptop
 @media screen and (min-width: 1024px) {
   .movies {
-    grid-template-columns: repeat(4, 283px);
-    overflow-x: none;
-    margin: 0 0 5em 0;
-    justify-content: center;
-
-    .movie {
+    &-container {
+      grid-template-columns: repeat(4, 283px);
+      overflow-x: none;
+      margin: 0 0 5em 0;
+      justify-content: center;
+    }
+    &-movie {
       grid-template-rows: 9fr 3fr;
+
       &-img-container {
         height: 40vh;
       }
-
       &-text {
         padding: 0.5em;
         background-color: $color-dark-blue;
@@ -91,17 +97,17 @@
 // desktop
 @media screen and (min-width: 1920px) {
   .movies {
-    grid-template-columns: repeat(6, 283px);
-    overflow: hidden;
-    margin: 0 0 5em 0;
-    justify-content: center;
-
-    .movie {
+    &-container {
+      grid-template-columns: repeat(6, 283px);
+      overflow: hidden;
+      margin: 0 0 5em 0;
+      justify-content: center;
+    }
+    &-movie {
       grid-template-rows: 9fr 3fr;
       &-img-container {
         height: 40vh;
       }
-
       &-text {
         padding: 0.5em;
         background-color: $color-dark-blue;

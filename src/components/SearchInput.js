@@ -1,4 +1,5 @@
 import Movie from "./Movie.js";
+import SingleMoviePage from "./SingleMoviePage.js";
 
 function SearchInput(input, moviesContainer, movies, main) {
   input.addEventListener(

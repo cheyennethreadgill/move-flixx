@@ -1,5 +1,5 @@
 function SingleMoviePage(movies, movieSection, main, header, input) {
-  const movie = document.querySelectorAll(".movie");
+  const movie = document.querySelectorAll(".movies-movie");
 
   // SHOW SINGLE MOVIE PAGE
   movie.forEach((item) => {

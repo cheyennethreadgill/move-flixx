@@ -2,20 +2,10 @@ import Movie from "./Movie.js";
 import ShowAllMovies from "./ShowAllMovies.js";
 
 // create az section
-function AZ(
-  aZTitle,
-  movies,
-  movieSection,
-  main,
-  header
-) {
+function AZ(aZTitle, movies, movieSection, main, header) {
   // *********************************************
-  movieSection =
-    document.createElement("section");
-  movieSection.setAttribute(
-    "class",
-    "movie-section"
-  );
+  movieSection = document.createElement("section");
+  movieSection.setAttribute("class", "movie-section");
 
   const dFlex = document.createElement("div");
   dFlex.setAttribute("class", "d-flex");
@@ -25,10 +15,9 @@ function AZ(
   `;
   movieSection.appendChild(dFlex);
 
-  const moviesContainer =
-    document.createElement("section");
+  const moviesContainer = document.createElement("section");
   moviesContainer.setAttribute("class", "a-z");
-  moviesContainer.setAttribute("class", "movies");
+  moviesContainer.setAttribute("class", "movies-container");
 
   // a-z
   const aZArray = movies
@@ -50,19 +39,12 @@ function AZ(
 
   // *********************************************
   // see all
-  const seeAllBtn =
-    document.querySelector("#a-z");
+  const seeAllBtn = document.querySelector("#a-z");
   seeAllBtn.addEventListener(
     "click",
     () => {
       seeAllBtn.classList.add("hide");
-      new ShowAllMovies(
-        seeAllBtn,
-        movies,
-        main,
-        movieSection,
-        moviesContainer
-      );
+      new ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer);
     },
     false
   );
