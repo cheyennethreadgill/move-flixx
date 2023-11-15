@@ -18,16 +18,7 @@ function CreateMovieScroll(movies) {
   var NewTitle = "New";
   var movieSection;
 
-  SearchInput(
-    input,
-    moviesContainer,
-    body,
-    aZTitle,
-    movies,
-    movieSection,
-    main,
-    header
-  );
+  SearchInput(input, moviesContainer, movies, main);
   AZ(aZTitle, movies, movieSection, main, header);
   CriticallyAcclaimed(
     CriticallyAcclaimedTitle,
