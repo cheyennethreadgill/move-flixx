@@ -1,6 +1,6 @@
 function SingleMoviePage(movies, movieSection, main, header, input) {
   const movie = document.querySelectorAll(".movies-movie");
-
+  const html = String.raw;
   // SHOW SINGLE MOVIE PAGE
   movie.forEach((item) => {
     item.addEventListener(
@@ -19,94 +19,96 @@ function SingleMoviePage(movies, movieSection, main, header, input) {
         const { backgroundImg, img, title, description } = movie;
 
         const movieContentSection = document.createElement("section");
-        const movieContent = `
-      <section class="single-movie">
-        <button class="btn-navigation">
-          <i
-            class="fa-solid fa-chevron-left fa-xl"
-            style="color: #8190eb"
-          ></i>
-        </button>
+        const movieContent = html`
+          <section class="single-movie">
+            <button class="btn-navigation">
+              <i
+                class="fa-solid fa-chevron-left fa-xl"
+                style="color: #8190eb"
+              ></i>
+            </button>
 
-        <div class="single-movie-img">
-          <img
-            src=${backgroundImg}
-            alt=${title}
-          />
-        </div>
+            <div class="single-movie-img">
+              <img src=${backgroundImg} alt=${title} />
+            </div>
 
-        <div class="single-movie-synopsis">
-          <div class="wrapper">
-            <section class="single-movie-content">
-              <div class="row">
-                <div class="col-2">
-                  <div class="img-container">
-                    <img
-                      src=${img}
-                      alt=${title}
-                    />
+            <div class="single-movie-synopsis">
+              <div class="wrapper">
+                <section class="single-movie-content">
+                  <div class="row">
+                    <div class="col-2">
+                      <div class="img-container">
+                        <img src=${img} alt=${title} />
+                      </div>
+                    </div>
+                    <div class="col-10">
+                      <p class="single-movie-text-ratingcount">40,325</p>
+                      <h1>${title}</h1>
+                      <p class="single-movie-runtime">1 hr 35 min</p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-10">
-                  <p class="single-movie-text-ratingcount">40,325</p>
-                  <h1>${title}</h1>
-                  <p class="single-movie-runtime">1 hr 35 min</p>
-                </div>
+
+                  <p class="single-movie-description">${description}</p>
+
+                  <h2>Cast</h2>
+                </section>
+                <section class="single-movie-cast">
+                  <div class="container">
+                    <div class="single-movie-cast-div">
+                      <div class="single-movie-cast-div-member">
+                        <span class="placeholder"></span>
+                        <p class="single-movie-cast-div-member-name">
+                          Lorem Ipsum
+                        </p>
+                      </div>
+                    </div>
+                    <div class="single-movie-cast-div">
+                      <div class="single-movie-cast-div-member">
+                        <span class="placeholder"></span>
+                        <p class="single-movie-cast-div-member-name">
+                          Lorem Ipsum
+                        </p>
+                      </div>
+                    </div>
+                    <div class="single-movie-cast-div">
+                      <div class="single-movie-cast-div-member">
+                        <span class="placeholder"></span>
+                        <p class="single-movie-cast-div-member-name">
+                          Lorem Ipsum
+                        </p>
+                      </div>
+                    </div>
+                    <div class="single-movie-cast-div">
+                      <div class="single-movie-cast-div-member">
+                        <span class="placeholder"></span>
+                        <p class="single-movie-cast-div-member-name">
+                          Lorem Ipsum
+                        </p>
+                      </div>
+                    </div>
+                    <div class="single-movie-cast-div">
+                      <div class="single-movie-cast-div-member">
+                        <span class="placeholder"></span>
+                        <p class="single-movie-cast-div-member-name">
+                          Lorem Ipsum
+                        </p>
+                      </div>
+                    </div>
+                    <div class="single-movie-cast-div">
+                      <div class="single-movie-cast-div-member">
+                        <span class="placeholder"></span>
+                        <p class="single-movie-cast-div-member-name">
+                          Lorem Ipsum
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
               </div>
-
-              <p class="single-movie-description">
-                ${description}
-              </p>
-
-              <h2>Cast</h2>
-            </section>
-            <section class="single-movie-cast">
-              <div class="container">
-                <div class="single-movie-cast-div">
-                  <div class="single-movie-cast-div-member">
-                    <span class="placeholder"></span>
-                    <p class="single-movie-cast-div-member-name">Lorem Ipsum</p>
-                  </div>
-                </div>
-                <div class="single-movie-cast-div">
-                  <div class="single-movie-cast-div-member">
-                    <span class="placeholder"></span>
-                    <p class="single-movie-cast-div-member-name">Lorem Ipsum</p>
-                  </div>
-                </div>
-                <div class="single-movie-cast-div">
-                  <div class="single-movie-cast-div-member">
-                    <span class="placeholder"></span>
-                    <p class="single-movie-cast-div-member-name">Lorem Ipsum</p>
-                  </div>
-                </div>
-                <div class="single-movie-cast-div">
-                  <div class="single-movie-cast-div-member">
-                    <span class="placeholder"></span>
-                    <p class="single-movie-cast-div-member-name">Lorem Ipsum</p>
-                  </div>
-                </div>
-                <div class="single-movie-cast-div">
-                  <div class="single-movie-cast-div-member">
-                    <span class="placeholder"></span>
-                    <p class="single-movie-cast-div-member-name">Lorem Ipsum</p>
-                  </div>
-                </div>
-                <div class="single-movie-cast-div">
-                  <div class="single-movie-cast-div-member">
-                    <span class="placeholder"></span>
-                    <p class="single-movie-cast-div-member-name">Lorem Ipsum</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-        <div class="container">
-          <button class="btn-primary">Buy Movie</button>
-        </div>
-      </section>
-    `;
+            </div>
+            <button class="btn-primary">Buy Movie</button>
+          </section>
+        `;
         movieContentSection.innerHTML = movieContent;
 
         main.appendChild(movieContentSection);

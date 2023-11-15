@@ -20,6 +20,7 @@
     top: 0;
     left: 0;
     z-index: -1;
+    width: 100%;
 
     &::after {
       content: "";
@@ -39,6 +40,7 @@
     padding: 2rem 2rem 0 2rem;
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
+    width: 100%;
 
     .img-container {
       width: 24vw;

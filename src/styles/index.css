@@ -276,6 +276,7 @@ button {
   top: 0;
   left: 0;
   z-index: -1;
+  width: 100%;
 }
 .single-movie-img::after {
   content: "";
@@ -293,6 +294,7 @@ button {
   padding: 2rem 2rem 0 2rem;
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
+  width: 100%;
 }
 .single-movie-content .img-container {
   width: 24vw;
