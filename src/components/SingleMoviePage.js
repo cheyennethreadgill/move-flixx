@@ -122,6 +122,9 @@ function SingleMoviePage(movies, movieSection, main, header, input) {
 
             section.classList.add("hide");
             section.classList.remove("show");
+
+            input.classList.add("hide");
+            input.classList.remove("show");
           }
         });
 
@@ -138,6 +141,9 @@ function SingleMoviePage(movies, movieSection, main, header, input) {
 
                 header.classList.remove("hide");
                 header.classList.add("show");
+
+                input.classList.remove("hide");
+                input.classList.add("show");
               });
               main.removeChild(movieContentSection);
             },
