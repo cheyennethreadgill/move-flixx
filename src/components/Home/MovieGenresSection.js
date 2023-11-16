@@ -1,14 +1,26 @@
-import Movie from "./Movie.js";
-import ShowAllMovies from "./ShowAllMovies.js";
+import Movie from "../Movie.js";
+import ShowAllMovies from "../ShowAllMovies.js";
 
-function CriticallyAcclaimed(
-  CriticallyAcclaimedTitle,
+function MovieGenresSection(
+  title,
   movies,
   movieSection,
   main,
   header,
-  input
+  input,
+  filterBy
 ) {
+  {
+    this.title = title;
+    this.movies = movies;
+    this.movieSection = movieSection;
+    this.main = main;
+    this.header = header;
+    this.input = input;
+    this.filterBy = filterBy;
+  }
+  console.log(filterBy);
+
   // *************************************Create movie section
   movieSection = document.createElement("section");
   movieSection.setAttribute("class", "movie-section");
@@ -16,10 +28,11 @@ function CriticallyAcclaimed(
   const dFlex = document.createElement("div");
   dFlex.setAttribute("class", "d-flex");
   dFlex.innerHTML = `
-  <h2>${CriticallyAcclaimedTitle}</h2>
-  <button id="critically-acclaimed" class="seeAll">See All</button>
+  <h2>${title}</h2>
+  <button id="${title}" class="seeAll">See All</button>
   `;
   movieSection.appendChild(dFlex);
+
   // *************************************Create movie section
 
   // *************************************Create movie container
@@ -28,41 +41,46 @@ function CriticallyAcclaimed(
   moviesContainer.setAttribute("class", "movies_container");
   // *************************************Create movie container
 
-  // ****************************Find CriticallyAcclaimed Movies
-  const CriticallyAcclaimedMovies = movies
+  // ****************************Find Movies
+  const thisMovies = movies
     .filter((movie) => {
-      if (movie.popularity <= 1000) {
+      if (movie[filterBy] > 0) {
         return movie;
       }
     })
     .slice(0, 6);
-  const CriticallyAcclaimedMoviesAll = movies.filter((movie) => {
-    if (movie.popularity <= 1000) {
+
+  const thisMoviesContent = thisMovies
+    .map((movie) => {
+      return Movie(movie);
+    })
+    .join("");
+
+  const thisMoviesAll = movies.filter((movie) => {
+    if (movie.filterBy <= 1000) {
       return movie;
     }
   });
-
-  const CriticallyAcclaimedContent = CriticallyAcclaimedMovies.map((movie) => {
-    return Movie(movie);
-  }).join("");
-  // ****************************Find CriticallyAcclaimed Movies
+  // ****************************Find Movies
 
   // *************************************Append Movies to main
-  moviesContainer.innerHTML = CriticallyAcclaimedContent;
+  moviesContainer.innerHTML = thisMoviesContent;
   movieSection.appendChild(moviesContainer);
   main.appendChild(movieSection);
   // *************************************Append Movies to main
 
   // *********************************************
   // see all
-  const seeAllBtn = document.querySelector("#critically-acclaimed");
+  const seeAllBtn = document.querySelector("#" + title);
+  console.log(seeAllBtn);
+
   seeAllBtn.addEventListener(
     "click",
     () => {
       seeAllBtn.classList.add("hide");
       new ShowAllMovies(
         seeAllBtn,
-        CriticallyAcclaimedMoviesAll,
+        thisMoviesAll,
         main,
         movieSection,
         moviesContainer,
@@ -74,4 +92,4 @@ function CriticallyAcclaimed(
   );
 }
 
-export default CriticallyAcclaimed;
+export default MovieGenresSection;
