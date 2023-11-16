@@ -3,6 +3,7 @@ import AZ from "./AZ.js";
 import CriticallyAcclaimed from "./CriticallyAcclaimed.js";
 import New from "./New.js";
 import SingleMoviePage from "./SingleMoviePage.js";
+import MovieGenresSection from "./Home/MovieGenresSection.js";
 
 function App(movies) {
   const html = String.raw;
@@ -31,19 +32,62 @@ function App(movies) {
     html,
   });
 
-  AZ(aZTitle, movies, movieSection, main, header, input);
+  // ******************************************************GENRES
 
-  CriticallyAcclaimed(
-    CriticallyAcclaimedTitle,
+  const CriticallyAcclaimed = new MovieGenresSection(
+    "critically-acclaimed",
     movies,
     movieSection,
     main,
     header,
-    input
+    input,
+    "popularity"
   );
-  New(NewTitle, movies, movieSection, main, header, input);
+  const AZ = new MovieGenresSection(
+    "AZ",
+    movies,
+    movieSection,
+    main,
+    header,
+    input,
+    "rating"
+  );
+  const New = new MovieGenresSection(
+    "New",
+    movies,
+    movieSection,
+    main,
+    header,
+    input,
+    "ratingCount"
+  );
 
-  SingleMoviePage(movies, movieSection, main, header, input, html);
+  // ************DONT NEED********************************
+  //    ***or respective components
+  // AZ(aZTitle, movies, movieSection, main, header, input);
+
+  // CriticallyAcclaimed(
+  //   CriticallyAcclaimedTitle,
+  //   movies,
+  //   movieSection,
+  //   main,
+  //   header,
+  //   input
+  // );
+  // New(NewTitle, movies, movieSection, main, header, input);
+  // ************DONT NEED********************************
+  //    ***or respective components
+
+  // *******************************************************GLOBAL
+  SingleMoviePage(
+    movies,
+    movieSection,
+    main,
+    header,
+    input,
+    html,
+    moviesContainer
+  );
 
   // Add rating colors after movies are rendered
   const ratingTags = document.querySelectorAll(".movies_movie_text_rating");
