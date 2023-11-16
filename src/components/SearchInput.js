@@ -6,6 +6,7 @@ function SearchInput({
   movies,
   movieSection,
   moviesContainer,
+  newMoviesContainer,
   main,
   header,
   input,
@@ -32,6 +33,23 @@ function SearchInput({
         })
         .join("");
       main.appendChild(moviesContainer);
+
+      document
+        .querySelector(".movies_movie")
+        .addEventListener(
+          "click",
+          SingleMoviePage(
+            movies,
+            movieSection,
+            main,
+            header,
+            input,
+            html,
+            moviesContainer,
+            newMoviesContainer
+          ),
+          false
+        );
     },
     false
   );

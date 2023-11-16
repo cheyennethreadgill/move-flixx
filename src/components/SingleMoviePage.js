@@ -5,6 +5,7 @@ function SingleMoviePage(
   header,
   input,
   html,
+  moviesContainer,
   newMoviesContainer
 ) {
   const movie = document.querySelectorAll(".movies_movie");
@@ -16,6 +17,7 @@ function SingleMoviePage(
       function showMovie() {
         const itemValue = item.value;
 
+        // Find Movie
         let foundMovie = movies.filter((movie) => {
           const { popularity } = movie;
 
@@ -23,6 +25,7 @@ function SingleMoviePage(
             return movie;
           }
         });
+
         let movie = foundMovie[0];
         const { backgroundImg, img, title, description, rating } = movie;
 
@@ -130,6 +133,9 @@ function SingleMoviePage(
         // toggle add/hide
         header.classList.add("hide");
         input.classList.add("hide");
+        moviesContainer.classList.add("hide");
+
+        // if new movie container exist
         if (newMoviesContainer) {
           newMoviesContainer.classList.add("hide");
 
@@ -139,6 +145,7 @@ function SingleMoviePage(
           }
         }
 
+        // toggle/hide
         document.querySelectorAll(".movie-section").forEach((section) => {
           section.classList.add("hide");
 
@@ -148,13 +155,18 @@ function SingleMoviePage(
           }
         });
 
+        // toggle hide
         if (
-          header.classList.contains("show") & input.classList.contains("show")
+          moviesContainer.classList.contains("show") &
+          header.classList.contains("show") &
+          input.classList.contains("show")
         ) {
           header.classList.add("hide");
           header.classList.remove("show");
           input.classList.add("hide");
           input.classList.remove("show");
+          moviesContainer.classList.add("hide");
+          moviesContainer.classList.remove("show");
         }
 
         // GO BACK HOME
@@ -164,15 +176,18 @@ function SingleMoviePage(
           button.addEventListener(
             "click",
             () => {
+              moviesContainer.classList.remove("hide");
+              moviesContainer.classList.add("show");
+
+              header.classList.remove("hide");
+              header.classList.add("show");
+
+              input.classList.remove("hide");
+              input.classList.add("show");
+
               document.querySelectorAll(".movie-section").forEach((section) => {
                 section.classList.remove("hide");
                 section.classList.add("show");
-
-                header.classList.remove("hide");
-                header.classList.add("show");
-
-                input.classList.remove("hide");
-                input.classList.add("show");
               });
               main.removeChild(movieContentSection);
 

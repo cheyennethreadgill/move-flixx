@@ -6,6 +6,7 @@
   background-color: transparent;
   border: solid 2px $color-periwinkle;
   color: $color-white;
+  text-transform: capitalize;
 
   &:focus-visible {
     outline: none;

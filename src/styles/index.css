@@ -381,6 +381,7 @@ button {
   background-color: transparent;
   border: solid 2px #8190eb;
   color: #ffffff;
+  text-transform: capitalize;
 }
 .search_input:focus-visible {
   outline: none;
