@@ -44,8 +44,20 @@ function MovieGenresSection(
   // ****************************Find Movies
   const thisMovies = movies
     .filter((movie) => {
-      if (movie[filterBy] > 0) {
-        return movie;
+      if (filterBy === "rating") {
+        if (movie[filterBy] >= 0) {
+          return movie;
+        }
+      }
+      if (filterBy === "popularity") {
+        if (movie[filterBy] <= 1000) {
+          return movie;
+        }
+      }
+      if (filterBy === "ratingCount") {
+        if (movie[filterBy] >= 1800) {
+          return movie;
+        }
       }
     })
     .slice(0, 6);
