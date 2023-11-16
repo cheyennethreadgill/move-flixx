@@ -19,7 +19,6 @@ function MovieGenresSection(
     this.input = input;
     this.filterBy = filterBy;
   }
-  console.log(filterBy);
 
   // *************************************Create movie section
   movieSection = document.createElement("section");
@@ -69,8 +68,20 @@ function MovieGenresSection(
     .join("");
 
   const thisMoviesAll = movies.filter((movie) => {
-    if (movie.filterBy <= 1000) {
-      return movie;
+    if (filterBy === "rating") {
+      if (movie[filterBy] >= 0) {
+        return movie;
+      }
+    }
+    if (filterBy === "popularity") {
+      if (movie[filterBy] <= 1000) {
+        return movie;
+      }
+    }
+    if (filterBy === "ratingCount") {
+      if (movie[filterBy] >= 1800) {
+        return movie;
+      }
     }
   });
   // ****************************Find Movies
