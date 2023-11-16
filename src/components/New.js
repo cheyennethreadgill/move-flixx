@@ -1,7 +1,7 @@
 import Movie from "./Movie.js";
 import ShowAllMovies from "./ShowAllMovies.js";
 
-function New(NewTitle, movies, movieSection, main, header) {
+function New(NewTitle, movies, movieSection, main, header, input) {
   // *********************************************
   movieSection = document.createElement("section");
   movieSection.setAttribute("class", "movie-section");
@@ -54,7 +54,8 @@ function New(NewTitle, movies, movieSection, main, header) {
         main,
         movieSection,
         moviesContainer,
-        header
+        header,
+        input
       );
     },
     false

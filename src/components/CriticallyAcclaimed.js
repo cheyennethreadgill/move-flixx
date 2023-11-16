@@ -5,7 +5,9 @@ function CriticallyAcclaimed(
   CriticallyAcclaimedTitle,
   movies,
   movieSection,
-  main
+  main,
+  header,
+  input
 ) {
   // *********************************************
   movieSection = document.createElement("section");
@@ -39,8 +41,7 @@ function CriticallyAcclaimed(
 
   const CriticallyAcclaimedContent = CriticallyAcclaimedMovies.map((movie) => {
     return Movie(movie);
-  } ).join( "" );
-  
+  }).join("");
 
   moviesContainer.innerHTML = CriticallyAcclaimedContent;
   movieSection.appendChild(moviesContainer);
@@ -59,7 +60,8 @@ function CriticallyAcclaimed(
         main,
         movieSection,
         moviesContainer,
-        header
+        header,
+        input
       );
     },
     false

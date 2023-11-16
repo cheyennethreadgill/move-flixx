@@ -20,7 +20,16 @@ function App(movies) {
   const moviesContainer = document.createElement("section");
   moviesContainer.setAttribute("class", "movies_container");
 
-  SearchInput({movies, movieSection, movieSection, moviesContainer, main, header, input, html});
+  SearchInput({
+    movies,
+    movieSection,
+    movieSection,
+    moviesContainer,
+    main,
+    header,
+    input,
+    html,
+  });
 
   AZ(aZTitle, movies, movieSection, main, header, input);
 
@@ -29,9 +38,10 @@ function App(movies) {
     movies,
     movieSection,
     main,
-    header
+    header,
+    input
   );
-  New(NewTitle, movies, movieSection, main, header);
+  New(NewTitle, movies, movieSection, main, header, input);
 
   SingleMoviePage(movies, movieSection, main, header, input, html);
 
