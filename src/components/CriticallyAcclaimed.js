@@ -58,7 +58,8 @@ function CriticallyAcclaimed(
         CriticallyAcclaimedMoviesAll,
         main,
         movieSection,
-        moviesContainer
+        moviesContainer,
+        header
       );
     },
     false

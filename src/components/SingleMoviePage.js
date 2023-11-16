@@ -1,7 +1,15 @@
-function SingleMoviePage(movies, movieSection, main, header, input, html) {
+function SingleMoviePage(
+  movies,
+  movieSection,
+  main,
+  header,
+  input,
+  html,
+  newMoviesContainer
+) {
   const movie = document.querySelectorAll(".movies_movie");
 
-  // SHOW SINGLE MOVIE PAGE
+  // ON MOVIE CLICK, SHOW SINGLE MOVIE PAGE
   movie.forEach((item) => {
     item.addEventListener(
       "click",
@@ -19,7 +27,7 @@ function SingleMoviePage(movies, movieSection, main, header, input, html) {
         const { backgroundImg, img, title, description, rating } = movie;
 
         const movieContentSection = document.createElement("section");
-        const movieContent = html`
+        const movieContent = `
           <section class="single-movie">
             <button class="btn-navigation">
               <i
@@ -119,22 +127,35 @@ function SingleMoviePage(movies, movieSection, main, header, input, html) {
 
         main.appendChild(movieContentSection);
 
+        // toggle add/hide
+        header.classList.add("hide");
+        input.classList.add("hide");
+        if (newMoviesContainer) {
+          newMoviesContainer.classList.add("hide");
+
+          if (newMoviesContainer.classList.contains("show")) {
+            newMoviesContainer.classList.remove("show");
+            newMoviesContainer.classList.add("hide");
+          }
+        }
+
         document.querySelectorAll(".movie-section").forEach((section) => {
           section.classList.add("hide");
-          header.classList.add("hide");
-          input.classList.add("hide");
 
           if (section.classList.contains("show")) {
-            header.classList.add("hide");
-            header.classList.remove("show");
-
             section.classList.add("hide");
             section.classList.remove("show");
-
-            input.classList.add("hide");
-            input.classList.remove("show");
           }
         });
+
+        if (
+          header.classList.contains("show") & input.classList.contains("show")
+        ) {
+          header.classList.add("hide");
+          header.classList.remove("show");
+          input.classList.add("hide");
+          input.classList.remove("show");
+        }
 
         // GO BACK HOME
         const backButtons = document.querySelectorAll(".btn-navigation");

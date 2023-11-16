@@ -33,9 +33,7 @@ function New(NewTitle, movies, movieSection, main, header) {
     }
   });
 
-  const NewContent = New.map( ( movie ) => {
-    
-    console.log(movie);
+  const NewContent = New.map((movie) => {
     return Movie(movie);
   }).join("");
 
@@ -50,7 +48,14 @@ function New(NewTitle, movies, movieSection, main, header) {
     "click",
     () => {
       seeAllBtn.classList.add("hide");
-      new ShowAllMovies(seeAllBtn, NewAll, main, movieSection, moviesContainer);
+      new ShowAllMovies(
+        seeAllBtn,
+        NewAll,
+        main,
+        movieSection,
+        moviesContainer,
+        header
+      );
     },
     false
   );

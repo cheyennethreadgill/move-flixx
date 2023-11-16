@@ -10,7 +10,7 @@ function App(movies) {
   const main = document.querySelector("main");
   const header = document.querySelector("header");
   const body = document.querySelector("body");
-  const input = document.querySelector("#search-input");
+  const input = document.querySelector(".search_input");
 
   var CriticallyAcclaimedTitle = "Critically Acclaimed";
   var aZTitle = "A-Z";
@@ -22,7 +22,7 @@ function App(movies) {
 
   SearchInput(input, moviesContainer, movies, main);
 
-  AZ(aZTitle, movies, movieSection, main, header);
+  AZ(aZTitle, movies, movieSection, main, header, input);
 
   CriticallyAcclaimed(
     CriticallyAcclaimedTitle,

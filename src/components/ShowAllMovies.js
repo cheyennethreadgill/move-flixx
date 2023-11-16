@@ -1,7 +1,17 @@
 import Movie from "./Movie.js";
+import SingleMoviePage from "./SingleMoviePage.js";
 
 // show AZ page
-function ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer) {
+function ShowAllMovies(
+  seeAllBtn,
+  movies,
+  main,
+  movieSection,
+  moviesContainer,
+  header,
+  input,
+  html
+) {
   {
     this.seeAllBtn = seeAllBtn;
     this.movies = movies;
@@ -11,7 +21,6 @@ function ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer) {
 
   const allMoviesContent = movies
     .map((movie) => {
-      const { img, rating, title, popularity } = movie;
       return Movie(movie);
     })
     .join("");
@@ -25,7 +34,7 @@ function ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer) {
   main.appendChild(moviesContainer);
 
   // Add rating
-  const ratingTags = document.querySelectorAll(".movies_movie_text-rating");
+  const ratingTags = document.querySelectorAll(".movies_movie_text_rating");
   ratingTags.forEach((tag) => {
     if (tag.innerHTML >= 7) {
       tag.classList.add("green");
@@ -37,6 +46,18 @@ function ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer) {
       tag.classList.add("red");
     }
   });
+
+  const newMoviesContainer = document.querySelector(".movies_container");
+
+  SingleMoviePage(
+    movies,
+    movieSection,
+    main,
+    header,
+    input,
+    html,
+    newMoviesContainer
+  );
 }
 
 export default ShowAllMovies;

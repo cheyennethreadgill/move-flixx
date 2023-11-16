@@ -9,5 +9,12 @@
     "source.fixAll.format": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnPaste": true
+  "editor.formatOnPaste": true,
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.inlineSuggest.enabled": false,
+  "editor.rename.enablePreview": true,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.screenReaderAnnounceInlineSuggestion": false,
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false
 }

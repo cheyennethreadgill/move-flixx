@@ -2,7 +2,7 @@ import Movie from "./Movie.js";
 import ShowAllMovies from "./ShowAllMovies.js";
 
 // create az section
-function AZ(aZTitle, movies, movieSection, main, header) {
+function AZ(aZTitle, movies, movieSection, main, header, input) {
   // *********************************************
   movieSection = document.createElement("section");
   movieSection.setAttribute("class", "movie-section");
@@ -32,8 +32,8 @@ function AZ(aZTitle, movies, movieSection, main, header) {
     .map((movie) => {
       return Movie(movie);
     })
-    .join( "" );
-  
+    .join("");
+
   moviesContainer.innerHTML = aZContent;
   movieSection.appendChild(moviesContainer);
   main.appendChild(movieSection);
@@ -45,7 +45,15 @@ function AZ(aZTitle, movies, movieSection, main, header) {
     "click",
     () => {
       seeAllBtn.classList.add("hide");
-      new ShowAllMovies(seeAllBtn, movies, main, movieSection, moviesContainer);
+      new ShowAllMovies(
+        seeAllBtn,
+        movies,
+        main,
+        movieSection,
+        moviesContainer,
+        header,
+        input
+      );
     },
     false
   );

@@ -45,26 +45,6 @@ col-lg-12 {
   width: 100%;
 }
 
-.hide {
-  display: none;
-}
-
-.show {
-  display: block;
-}
-
-.red {
-  color: #f33b05;
-}
-
-.orange {
-  color: #d4790e;
-}
-
-.green {
-  color: #61a823;
-}
-
 *,
 ::after,
 ::before {
@@ -393,7 +373,7 @@ button {
     width: 1037px;
   }
 }
-#search-input {
+.search_input {
   width: 100%;
   padding: 1em;
   margin: 0 0 2em 0;
@@ -402,14 +382,34 @@ button {
   border: solid 2px #8190eb;
   color: #ffffff;
 }
-#search-input:focus-visible {
+.search_input:focus-visible {
   outline: none;
 }
-#search-input::-moz-placeholder {
+.search_input::-moz-placeholder {
   font-size: 1.2em;
   color: #8190eb;
 }
-#search-input::placeholder {
+.search_input::placeholder {
   font-size: 1.2em;
   color: #8190eb;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.red {
+  color: #f33b05;
+}
+
+.orange {
+  color: #d4790e;
+}
+
+.green {
+  color: #61a823;
 }/*# sourceMappingURL=index.css.map */
