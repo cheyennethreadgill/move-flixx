@@ -39,7 +39,7 @@ function MovieGenresSection(
   const moviesContainer = document.createElement("section");
   moviesContainer.setAttribute("class", "critically-acclaimed");
   moviesContainer.setAttribute("class", "movies_container");
-  // *************************************Create movie container
+  // ************************************Create movie container
 
   // ****************************Find Movies
   const thisMovies = movies
