@@ -20,7 +20,7 @@ function App(movies) {
   const moviesContainer = document.createElement("section");
   moviesContainer.setAttribute("class", "movies_container");
 
-  SearchInput(input, moviesContainer, movies, main);
+  SearchInput({movies, movieSection, movieSection, moviesContainer, main, header, input, html});
 
   AZ(aZTitle, movies, movieSection, main, header, input);
 

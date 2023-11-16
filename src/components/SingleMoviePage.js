@@ -175,6 +175,17 @@ function SingleMoviePage(
                 input.classList.add("show");
               });
               main.removeChild(movieContentSection);
+
+              if (newMoviesContainer) {
+                newMoviesContainer.classList.remove("hide");
+                newMoviesContainer.classList.add("show");
+
+                header.classList.remove("hide");
+                header.classList.add("show");
+
+                input.classList.remove("hide");
+                input.classList.add("show");
+              }
             },
             false
           );
