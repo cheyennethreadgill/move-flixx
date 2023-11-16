@@ -1,5 +1,3 @@
-import SingleMoviePage from "./SingleMoviePage.js";
-
 function Movie(movie) {
   const { img, rating, title, popularity } = movie;
 

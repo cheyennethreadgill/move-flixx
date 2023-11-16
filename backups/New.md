@@ -1,5 +1,5 @@
-import Movie from "./Movie.js";
-import ShowAllMovies from "./ShowAllMovies.js";
+import Movie from "../src/components/Movie.js";
+import ShowAllMovies from "../src/components/ShowAllMovies.js";
 
 function New(NewTitle, movies, movieSection, main, header, input) {
   // *********************************************
