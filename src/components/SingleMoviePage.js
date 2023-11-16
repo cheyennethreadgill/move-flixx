@@ -209,6 +209,20 @@ function SingleMoviePage(
       false
     );
   });
+
+  // Add rating
+  const ratingTags = document.querySelectorAll(".movies_movie_text_rating");
+  ratingTags.forEach((tag) => {
+    if (tag.innerHTML >= 7) {
+      tag.classList.add("green");
+    }
+    if ((tag.innerHTML >= 5.4) & (tag.innerHTML <= 7)) {
+      tag.classList.add("orange");
+    }
+    if ((tag.innerHTML >= 0) & (tag.innerHTML <= 5.3)) {
+      tag.classList.add("red");
+    }
+  });
 }
 
 export default SingleMoviePage;
