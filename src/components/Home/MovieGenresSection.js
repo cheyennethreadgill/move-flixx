@@ -8,7 +8,11 @@ function MovieGenresSection(
   main,
   header,
   input,
-  filterBy
+  filterBy,
+  mediaQuerySmall,
+  mediaQueryMedium,
+  mediaQueryMaxMedium,
+  mediaQueryLarge
 ) {
   {
     this.title = title;
@@ -95,7 +99,6 @@ function MovieGenresSection(
   // *********************************************
   // see all
   const seeAllBtn = document.querySelector("#" + title);
-  console.log(seeAllBtn);
 
   seeAllBtn.addEventListener(
     "click",
@@ -108,7 +111,11 @@ function MovieGenresSection(
         movieSection,
         moviesContainer,
         header,
-        input
+        input,
+        mediaQuerySmall,
+        mediaQueryMedium,
+        mediaQueryMaxMedium,
+        mediaQueryLarge
       );
     },
     false

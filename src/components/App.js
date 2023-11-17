@@ -14,6 +14,15 @@ function App(movies) {
   const moviesContainer = document.createElement("section");
   moviesContainer.setAttribute("class", "movies_container");
 
+  // queries
+  const mediaQuerySmall = window.matchMedia("(min-width: 200px)");
+
+  const mediaQueryMedium = window.matchMedia("(min-width: 600px)");
+
+  const mediaQueryMaxMedium = window.matchMedia("(max-width: 600px)");
+
+  const mediaQueryLarge = window.matchMedia("(min-width: 1024px)");
+
   SearchInput({
     movies,
     movieSection,
@@ -34,7 +43,11 @@ function App(movies) {
     main,
     header,
     input,
-    "popularity"
+    "popularity",
+    mediaQuerySmall,
+    mediaQueryMedium,
+    mediaQueryMaxMedium,
+    mediaQueryLarge
   );
   const AZ = new MovieGenresSection(
     "AZ",
@@ -43,7 +56,11 @@ function App(movies) {
     main,
     header,
     input,
-    "rating"
+    "rating",
+    mediaQuerySmall,
+    mediaQueryMedium,
+    mediaQueryMaxMedium,
+    mediaQueryLarge
   );
   const New = new MovieGenresSection(
     "New",
@@ -52,18 +69,14 @@ function App(movies) {
     main,
     header,
     input,
-    "ratingCount"
+    "ratingCount",
+    mediaQuerySmall,
+    mediaQueryMedium,
+    mediaQueryMaxMedium,
+    mediaQueryLarge
   );
 
-  SingleMoviePage(
-    movies,
-    movieSection,
-    main,
-    header,
-    input,
-    html,
-    moviesContainer
-  );
+  SingleMoviePage(movies, movieSection, main, header, input, moviesContainer);
 }
 
 // Dont need, already rendering in the async function
