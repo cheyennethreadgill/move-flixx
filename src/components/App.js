@@ -76,7 +76,14 @@ function App(movies) {
     mediaQueryLarge
   );
 
-  SingleMoviePage(movies, movieSection, main, header, input, moviesContainer);
+  SingleMoviePage(
+    movies,
+    movieSection,
+    main,
+    header,
+    input,
+    moviesContainer
+  );
 }
 
 // Dont need, already rendering in the async function
