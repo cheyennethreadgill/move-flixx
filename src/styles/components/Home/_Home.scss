@@ -1,0 +1,89 @@
+.banner {
+  height: 800px;
+
+  &_img {
+    height: 100%;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(
+        180deg,
+        #292847 -24%,
+        transparent 41%,
+        #292847 100%
+      );
+    }
+  }
+
+  &_body {
+    width: min(90vw, 100%);
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    padding: 6em 2em 13em 2em;
+  }
+
+  &_heading {
+    font-size: $font-size-main;
+    font-weight: $font-weight-main;
+    color: white;
+  }
+}
+
+// queries
+// phone
+@media screen and (min-width: 200px) {
+  //   .banner {
+  //     // &_img {
+
+  //     //   &::after {
+  //     //   }
+  //     // }
+
+  //     // &_body {
+  //     // }
+  //   }
+}
+
+// Max ipad
+@media screen and (max-width: 600px) {
+  .banner {
+    &_heading {
+      font-size: 3em;
+    }
+  }
+}
+
+// ipad
+@media screen and (min-width: 600px) {
+  .banner {
+    // &_img {
+
+    //   &::after {
+    //   }
+    // }
+
+    &_body {
+      width: 50%;
+      padding: 7em 7em 9em 7em;
+    }
+  }
+}
+
+// laptop
+@media screen and (min-width: 1024px) {
+}
+// desktop
+@media screen and (min-width: 1920px) {
+}
