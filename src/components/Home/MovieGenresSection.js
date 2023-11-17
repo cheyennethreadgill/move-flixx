@@ -12,7 +12,8 @@ function MovieGenresSection(
   mediaQuerySmall,
   mediaQueryMedium,
   mediaQueryMaxMedium,
-  mediaQueryLarge
+  mediaQueryLarge,
+  banner
 ) {
   {
     this.title = title;
@@ -115,7 +116,8 @@ function MovieGenresSection(
         mediaQuerySmall,
         mediaQueryMedium,
         mediaQueryMaxMedium,
-        mediaQueryLarge
+        mediaQueryLarge,
+        banner
       );
     },
     false

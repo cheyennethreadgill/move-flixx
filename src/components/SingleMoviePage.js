@@ -5,10 +5,12 @@ function SingleMoviePage(
   header,
   input,
   moviesContainer,
-  newMoviesContainer
+  banner
 ) {
+  const newMoviesContainer = document.querySelector(".movies_container");
   const movie = document.querySelectorAll(".movies_movie");
 
+  console.log(banner)
   // ON MOVIE CLICK, SHOW SINGLE MOVIE PAGE
   movie.forEach((item) => {
     item.addEventListener(
@@ -134,6 +136,7 @@ function SingleMoviePage(
         header.classList.add("hide");
         input.classList.add("hide");
         moviesContainer.classList.add("hide");
+        banner.classList.add("hide");
 
         // if new movie container exist
         if (newMoviesContainer) {
@@ -158,12 +161,15 @@ function SingleMoviePage(
 
         // toggle hide
         if (
+          banner.classList.contains("show") &
           moviesContainer.classList.contains("show") &
           header.classList.contains("show") &
           input.classList.contains("show")
         ) {
           header.classList.add("hide");
           header.classList.remove("show");
+          banner.classList.add("hide");
+          banner.classList.remove("show");
           input.classList.add("hide");
           input.classList.remove("show");
           moviesContainer.classList.add("hide");
@@ -182,6 +188,9 @@ function SingleMoviePage(
 
               header.classList.remove("hide");
               header.classList.add("show");
+
+              banner.classList.remove("hide");
+              banner.classList.add("show");
 
               input.classList.remove("hide");
               input.classList.add("show");
