@@ -1,3 +1,4 @@
+import Banner from "./Home/Banner.js";
 import SearchInput from "./SearchInput.js";
 import SingleMoviePage from "./SingleMoviePage.js";
 import MovieGenresSection from "./Home/MovieGenresSection.js";
@@ -21,11 +22,14 @@ function App(movies) {
   const mediaQueryMaxMedium = window.matchMedia("(max-width: 600px)");
   const mediaQueryLarge = window.matchMedia("(min-width: 1024px)");
 
+  // Components
+
+  Banner(header, movies);
+
   SearchInput({
     movies,
     movieSection,
     moviesContainer,
-
     main,
     header,
     input,
