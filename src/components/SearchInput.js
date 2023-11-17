@@ -44,7 +44,6 @@ function SearchInput({
             main,
             header,
             input,
-            html,
             moviesContainer,
             newMoviesContainer
           ),

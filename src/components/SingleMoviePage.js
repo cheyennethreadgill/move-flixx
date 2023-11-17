@@ -28,6 +28,7 @@ function SingleMoviePage(
         let movie = foundMovie[0];
         const { backgroundImg, img, title, description, rating } = movie;
 
+        // create movie section
         const movieContentSection = document.createElement("section");
         const movieContent = `
           <section class="single-movie">
@@ -126,7 +127,7 @@ function SingleMoviePage(
           </section>
         `;
         movieContentSection.innerHTML = movieContent;
-
+        // append movie section
         main.appendChild(movieContentSection);
 
         // toggle add/hide
@@ -136,6 +137,7 @@ function SingleMoviePage(
 
         // if new movie container exist
         if (newMoviesContainer) {
+          newMoviesContainer.classList.add("movies_container-new");
           newMoviesContainer.classList.add("hide");
 
           if (newMoviesContainer.classList.contains("show")) {
