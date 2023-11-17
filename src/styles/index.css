@@ -207,7 +207,7 @@ button {
 }
 @media screen and (min-width: 1024px) {
   .movies_container {
-    grid-template-columns: repeat(4, 283px);
+    grid-template-columns: repeat(4, 216px);
     overflow-x: none;
     margin: 0 0 5em 0;
     justify-content: center;

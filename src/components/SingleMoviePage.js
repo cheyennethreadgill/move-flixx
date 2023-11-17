@@ -4,7 +4,6 @@ function SingleMoviePage(
   main,
   header,
   input,
-  html,
   moviesContainer,
   newMoviesContainer
 ) {
