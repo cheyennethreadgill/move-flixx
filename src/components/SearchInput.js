@@ -6,11 +6,15 @@ function SearchInput({
   movies,
   movieSection,
   moviesContainer,
-  newMoviesContainer,
   main,
   header,
   input,
+  mediaQuerySmall,
+  mediaQueryMedium,
+  mediaQueryMaxMedium,
+  mediaQueryLarge,
 }) {
+  // change input to title case
   function toTitleCase(inputValue) {
     return inputValue.replace(/\w\S*/g, function (txt) {
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
@@ -19,9 +23,11 @@ function SearchInput({
   input.addEventListener(
     "keyup",
     function captureInput(e) {
+      // capture input value, set it to helper title case function
       const inputValue = e.target.value;
       e.target.value = toTitleCase(this.value);
 
+      // return found movies
       const foundMovies = movies.filter((movie) => {
         const { title } = movie;
 
@@ -29,9 +35,10 @@ function SearchInput({
           return movie;
         }
       });
-      console.log(foundMovies);
 
+      // remove existing children in dom
       main.replaceChildren();
+      //   replace with filter movies
       moviesContainer.innerHTML = foundMovies
         .map((movie) => {
           return Movie(movie);
@@ -39,6 +46,42 @@ function SearchInput({
         .join("");
       main.appendChild(moviesContainer);
 
+      // resize movies container here
+      // ***********************************QUERIES
+      //   -----------------------------Phone
+      // handles width change
+      const handlePhoneChange = (e) => {
+        if (e.matches) {
+          moviesContainer.style.cssText =
+            "grid-template-columns: repeat(2, 153px); justify-content: center;";
+        }
+      };
+      // injetcs the query into the function
+      handlePhoneChange(mediaQuerySmall);
+      // listens for width change
+      mediaQuerySmall.addListener(handlePhoneChange);
+
+      //   -----------------------------Tablet
+      const handleTabletChange = (e) => {
+        if (e.matches) {
+          moviesContainer.style.cssText =
+            "grid-template-columns: repeat(4, 216px);";
+        }
+      };
+      handleTabletChange(mediaQueryMedium);
+      mediaQueryMedium.addListener(handleTabletChange);
+
+      //   -----------------------------laptop
+      const handleLaptopChange = (e) => {
+        if (e.matches) {
+          moviesContainer.style.cssText =
+            "grid-template-columns: repeat(4, 216px);";
+        }
+      };
+      handleLaptopChange(mediaQueryLarge);
+      mediaQueryLarge.addListener(handleLaptopChange);
+
+      // once movie is clicked, create single movie page with parsed information
       document
         .querySelector(".movies_movie")
         .addEventListener(
@@ -49,8 +92,7 @@ function SearchInput({
             main,
             header,
             input,
-            moviesContainer,
-            newMoviesContainer
+            moviesContainer
           ),
           false
         );
