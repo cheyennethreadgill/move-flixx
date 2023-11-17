@@ -10,12 +10,17 @@ function SearchInput({
   main,
   header,
   input,
-  html,
 }) {
+  function toTitleCase(inputValue) {
+    return inputValue.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  }
   input.addEventListener(
     "keyup",
     function captureInput(e) {
-      let inputValue = e.target.value;
+      const inputValue = e.target.value;
+      e.target.value = toTitleCase(this.value);
 
       const foundMovies = movies.filter((movie) => {
         const { title } = movie;
