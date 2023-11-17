@@ -1,6 +1,7 @@
 import Movie from "./Movie.js";
 import SingleMoviePage from "./SingleMoviePage.js";
 import ShowAllMovies from "./ShowAllMovies.js";
+import Banner from './Home/Banner.js';
 
 function SearchInput({
   movies,
@@ -13,6 +14,7 @@ function SearchInput({
   mediaQueryMedium,
   mediaQueryMaxMedium,
   mediaQueryLarge,
+  banner
 }) {
   // change input to title case
   function toTitleCase(inputValue) {
@@ -92,7 +94,8 @@ function SearchInput({
             main,
             header,
             input,
-            moviesContainer
+            moviesContainer,
+            banner
           ),
           false
         );

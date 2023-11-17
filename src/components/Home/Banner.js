@@ -1,5 +1,5 @@
-function Banner(header, movies) {
-  const banner = document.querySelector(".banner");
+function Banner(header, banner, movies) {
+
 
   // return most popular movie
   //   const mostPopularMovie = movies.filter((movie) => {

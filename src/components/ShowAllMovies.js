@@ -13,7 +13,8 @@ function ShowAllMovies(
   mediaQuerySmall,
   mediaQueryMedium,
   mediaQueryMaxMedium,
-  mediaQueryLarge
+  mediaQueryLarge,
+  banner
 ) {
   {
     this.seeAllBtn = seeAllBtn;
@@ -21,6 +22,8 @@ function ShowAllMovies(
     this.main = main;
     this.movieSection = movieSection;
   }
+
+  console.log(banner)
 
   const allMoviesContent = movies
     .map((movie) => {
@@ -66,11 +69,20 @@ function ShowAllMovies(
   handleLaptopChange(mediaQueryLarge);
   mediaQueryLarge.addListener(handleLaptopChange);
 
+  // //   -----------------------------desktop
+  // const handleDesktopChange = (e) => {
+  //   if (e.matches) {
+  //     moviesContainer.style.cssText =
+  //       "grid-template-columns: repeat(5, 240px);";
+  //   }
+  // };
+  // handleDesktopChange(mediaQueryXL);
+  // mediaQueryXL.addListener(handleDesktopChange);
+
   // inject new content
   moviesContainer.innerHTML = allMoviesContent;
   main.appendChild(moviesContainer);
 
-  const newMoviesContainer = document.querySelector(".movies_container");
 
   SingleMoviePage(
     movies,
@@ -79,7 +91,7 @@ function ShowAllMovies(
     header,
     input,
     moviesContainer,
-    newMoviesContainer
+    banner
   );
 }
 

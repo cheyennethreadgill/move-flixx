@@ -11,6 +11,7 @@ function App(movies) {
   const body = document.querySelector("body");
   const main = document.querySelector("main");
   const header = document.querySelector("header");
+  const banner = document.querySelector(".banner");
   const input = document.querySelector(".search_input");
 
   const moviesContainer = document.createElement("section");
@@ -24,7 +25,7 @@ function App(movies) {
 
   // Components
 
-  Banner(header, movies);
+  Banner(header, banner, movies);
 
   SearchInput({
     movies,
@@ -37,6 +38,7 @@ function App(movies) {
     mediaQueryMedium,
     mediaQueryMaxMedium,
     mediaQueryLarge,
+    banner,
   });
 
   // **************************************************GENRES
@@ -52,7 +54,8 @@ function App(movies) {
     mediaQuerySmall,
     mediaQueryMedium,
     mediaQueryMaxMedium,
-    mediaQueryLarge
+    mediaQueryLarge,
+    banner
   );
   const AZ = new MovieGenresSection(
     "AZ",
@@ -65,8 +68,10 @@ function App(movies) {
     mediaQuerySmall,
     mediaQueryMedium,
     mediaQueryMaxMedium,
-    mediaQueryLarge
+    mediaQueryLarge,
+    banner
   );
+
   const New = new MovieGenresSection(
     "New",
     movies,
@@ -78,10 +83,19 @@ function App(movies) {
     mediaQuerySmall,
     mediaQueryMedium,
     mediaQueryMaxMedium,
-    mediaQueryLarge
+    mediaQueryLarge,
+    banner
   );
 
-  SingleMoviePage(movies, movieSection, main, header, input, moviesContainer);
+  SingleMoviePage(
+    movies,
+    movieSection,
+    main,
+    header,
+    input,
+    moviesContainer,
+    banner
+  );
 }
 
 // Dont need, already rendering in the async function
