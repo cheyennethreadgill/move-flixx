@@ -449,6 +449,9 @@ button {
     line-height: 41px;
     font-size: 2.6em;
   }
+  .banner_img::after {
+    background-image: linear-gradient(180deg, #292847 0%, transparent 43%, #292847 100%);
+  }
 }
 @media screen and (min-width: 1500px) {
   .banner_heading {

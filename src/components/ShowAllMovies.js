@@ -23,8 +23,6 @@ function ShowAllMovies(
     this.movieSection = movieSection;
   }
 
-  console.log(banner)
-
   const allMoviesContent = movies
     .map((movie) => {
       return Movie(movie);
@@ -35,7 +33,7 @@ function ShowAllMovies(
   main.replaceChildren();
   moviesContainer.style.rowGap = "2em";
 
-  // ***********************************QUERIES
+  // *********************************************QUERIES
   //   -----------------------------Phone
   // handles width change
   const handlePhoneChange = (e) => {
@@ -82,7 +80,6 @@ function ShowAllMovies(
   // inject new content
   moviesContainer.innerHTML = allMoviesContent;
   main.appendChild(moviesContainer);
-
 
   SingleMoviePage(
     movies,

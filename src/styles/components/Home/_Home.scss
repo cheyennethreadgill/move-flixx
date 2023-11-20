@@ -63,6 +63,7 @@
     &_heading {
       font-size: 2.7em;
     }
+   
 
     &_body {
       padding: 6em 2em 5em 2em;
@@ -100,11 +101,16 @@
       line-height: 41px;
       font-size: 2.6em;
     }
-    // &_img {
-
-    //   &::after {
-    //   }
-    // }
+     &_img {
+      &::after {
+        background-image: linear-gradient(
+          180deg,
+          #292847 0%,
+          transparent 43%,
+          #292847 100%
+        );
+      }
+    }
 
     // &_body {
     // }

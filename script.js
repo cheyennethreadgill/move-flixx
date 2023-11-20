@@ -25,7 +25,7 @@ const MoviesList = async function () {
     };
     return movieData;
   });
-  console.log(movieList);
+
   // passing movie array to main component
   App(movieList);
 };

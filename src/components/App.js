@@ -43,6 +43,21 @@ function App(movies) {
 
   // **************************************************GENRES
 
+  const New = new MovieGenresSection(
+    "New",
+    movies,
+    movieSection,
+    main,
+    header,
+    input,
+    "ratingCount",
+    mediaQuerySmall,
+    mediaQueryMedium,
+    mediaQueryMaxMedium,
+    mediaQueryLarge,
+    banner
+  );
+
   const CriticallyAcclaimed = new MovieGenresSection(
     "critically-acclaimed",
     movies,
@@ -57,29 +72,14 @@ function App(movies) {
     mediaQueryLarge,
     banner
   );
-  const AZ = new MovieGenresSection(
-    "AZ",
+  const All = new MovieGenresSection(
+    "All",
     movies,
     movieSection,
     main,
     header,
     input,
     "rating",
-    mediaQuerySmall,
-    mediaQueryMedium,
-    mediaQueryMaxMedium,
-    mediaQueryLarge,
-    banner
-  );
-
-  const New = new MovieGenresSection(
-    "New",
-    movies,
-    movieSection,
-    main,
-    header,
-    input,
-    "ratingCount",
     mediaQuerySmall,
     mediaQueryMedium,
     mediaQueryMaxMedium,
