@@ -1,6 +1,4 @@
 function Banner(header, banner, movies) {
-
-
   // return most popular movie
   //   const mostPopularMovie = movies.filter((movie) => {
   //     const { popularity } = movie;
@@ -19,16 +17,11 @@ function Banner(header, banner, movies) {
   // parse banner content with random movie data
   const bannerContent = `
     <div class="banner_img">
-      <img
-        src=${backgroundImg}
-        alt=${title}
-      />
-      <div class="banner_body">
-        <h1 class="banner_heading">${title}</h1>
-        <h3 class="banner_text">
-          ${description}
-        </h3>
-      </div>
+      <img src=${backgroundImg} alt=${title} />
+    </div>
+    <div class="banner_body">
+      <h1 class="banner_heading">${title}</h1>
+      <h3 class="banner_text">${description}</h3>
     </div>
   `;
   // append banner content

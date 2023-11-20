@@ -1,9 +1,13 @@
 .banner {
   height: 800px;
+  position: relative;
 
   &_img {
     height: 100%;
-    position: relative;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
 
     &::after {
       content: "";
@@ -23,14 +27,10 @@
 
   &_body {
     width: min(90vw, 100%);
-    margin: 0 auto;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: absolute;
-    top: 0;
-    z-index: 1;
     padding: 6em 2em 13em 2em;
   }
 
@@ -60,13 +60,16 @@
 // Max ipad
 @media screen and (max-width: 600px) {
   .banner {
+    height: max-content;
+    margin: 0 0 2em 0;
+
     &_heading {
       font-size: 2.7em;
     }
-   
 
     &_body {
-      padding: 6em 2em 5em 2em;
+      gap: 2em;
+      padding: 6em 2em 0em 2em;
     }
   }
 }
@@ -101,13 +104,13 @@
       line-height: 41px;
       font-size: 2.6em;
     }
-     &_img {
+    &_img {
       &::after {
         background-image: linear-gradient(
           180deg,
           #292847 0%,
-          transparent 43%,
-          #292847 100%
+          transparent 55%,
+          #292847 99%
         );
       }
     }
