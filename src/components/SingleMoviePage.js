@@ -10,7 +10,6 @@ function SingleMoviePage(
   const newMoviesContainer = document.querySelector(".movies_container");
   const movie = document.querySelectorAll(".movies_movie");
 
-  console.log(banner)
   // ON MOVIE CLICK, SHOW SINGLE MOVIE PAGE
   movie.forEach((item) => {
     item.addEventListener(
