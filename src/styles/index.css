@@ -327,9 +327,9 @@ button {
 }
 .single-movie-cast .container {
   display: grid;
-  grid-template-columns: repeat(6, 110px);
+  grid-template-columns: repeat(6, 103px);
   grid-template-rows: minmax(50px, auto);
-  padding: 1.5rem;
+  padding: 1.5rem 1.1em;
   overflow-x: auto;
 }
 .single-movie-cast-div {
