@@ -204,7 +204,7 @@ button {
 }
 @media screen and (min-width: 1024px) {
   .movies_container {
-    grid-template-columns: repeat(4, 216px);
+    grid-template-columns: repeat(5, 232px);
     overflow-x: none;
     margin: 0 0 5em 0;
     justify-content: center;
@@ -424,17 +424,35 @@ button {
   font-size: 4em;
   font-weight: 700;
   color: white;
+  line-height: 65px;
 }
 
 @media screen and (max-width: 600px) {
   .banner_heading {
-    font-size: 3em;
+    font-size: 2.7em;
+  }
+  .banner_body {
+    padding: 6em 2em 5em 2em;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
+  .banner_heading {
+    font-size: 3em;
+  }
   .banner_body {
-    width: 50%;
+    width: 75%;
     padding: 7em 7em 9em 7em;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .banner_heading {
+    line-height: 41px;
+    font-size: 2.6em;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .banner_heading {
+    font-size: 4em;
   }
 }
 .hide {

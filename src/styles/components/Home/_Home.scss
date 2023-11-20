@@ -38,6 +38,7 @@
     font-size: $font-size-main;
     font-weight: $font-weight-main;
     color: white;
+    line-height: 65px;
   }
 }
 
@@ -60,14 +61,25 @@
 @media screen and (max-width: 600px) {
   .banner {
     &_heading {
-      font-size: 3em;
+      font-size: 2.7em;
+    }
+
+    &_body {
+      padding: 6em 2em 5em 2em;
     }
   }
 }
 
 // ipad
 @media screen and (min-width: 600px) {
+}
+
+// laptop min
+@media screen and (min-width: 1024px) {
   .banner {
+    &_heading {
+      font-size: 3em;
+    }
     // &_img {
 
     //   &::after {
@@ -75,15 +87,43 @@
     // }
 
     &_body {
-      width: 50%;
+      width: 75%;
       padding: 7em 7em 9em 7em;
     }
   }
 }
 
-// laptop
-@media screen and (min-width: 1024px) {
+// laptop max
+@media screen and (max-width: 1024px) {
+  .banner {
+    &_heading {
+      line-height: 41px;
+      font-size: 2.6em;
+    }
+    // &_img {
+
+    //   &::after {
+    //   }
+    // }
+
+    // &_body {
+    // }
+  }
 }
+
 // desktop
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1500px) {
+  .banner {
+    &_heading {
+      font-size: 4em;
+    }
+    // &_img {
+
+    //   &::after {
+    //   }
+    // }
+
+    // &_body {
+    // }
+  }
 }
