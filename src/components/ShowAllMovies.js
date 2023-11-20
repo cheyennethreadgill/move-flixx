@@ -63,7 +63,7 @@ function ShowAllMovies(
   const handleLaptopChange = (e) => {
     if (e.matches) {
       moviesContainer.style.cssText =
-        "grid-template-columns: repeat(4, 216px);";
+        "grid-template-columns: repeat(5, 232px);";
     }
   };
   handleLaptopChange(mediaQueryLarge);

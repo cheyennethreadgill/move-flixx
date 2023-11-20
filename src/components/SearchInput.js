@@ -1,7 +1,7 @@
 import Movie from "./Movie.js";
 import SingleMoviePage from "./SingleMoviePage.js";
 import ShowAllMovies from "./ShowAllMovies.js";
-import Banner from './Home/Banner.js';
+import Banner from "./Home/Banner.js";
 
 function SearchInput({
   movies,
@@ -14,7 +14,7 @@ function SearchInput({
   mediaQueryMedium,
   mediaQueryMaxMedium,
   mediaQueryLarge,
-  banner
+  banner,
 }) {
   // change input to title case
   function toTitleCase(inputValue) {
@@ -77,7 +77,7 @@ function SearchInput({
       const handleLaptopChange = (e) => {
         if (e.matches) {
           moviesContainer.style.cssText =
-            "grid-template-columns: repeat(4, 216px);";
+            "grid-template-columns: repeat(5, 232px);";
         }
       };
       handleLaptopChange(mediaQueryLarge);
