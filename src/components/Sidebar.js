@@ -1,4 +1,20 @@
-const Sidebar = (body, movies, genres) => {
+import ShowAllMovies from "./ShowAllMovies.js";
+
+const Sidebar = (
+  body,
+  movies,
+  genres,
+  main,
+  movieSection,
+  moviesContainer,
+  header,
+  input,
+  mediaQuerySmall,
+  mediaQueryMedium,
+  mediaQueryMaxMedium,
+  mediaQueryLarge,
+  banner
+) => {
   const sidebar = document.querySelector(".navigation");
   const sidebarHamburger = document.querySelector(".navigation-hamburger");
   const ul = sidebar.querySelector("ul");
@@ -38,40 +54,50 @@ const Sidebar = (body, movies, genres) => {
     genreListContent = genres
       .map((genre) => {
         /**** Returning genre name */
-        return ` <li>
-        <a href="#">${genre.name}</a>
-      </li>`;
+        return ` <li >
+          <button href="#" class="seeAll sidebar_link" value=${genre.id}>${genre.name}</button>
+        </li>`;
       })
       .join("");
-    const gotGenre = genres.map((genre) => {
-      console.log(genre.name);
-
-      // const gotMovieGenre = movies.map((movie) => {
-      //   let movieGenreArray = movie.genre;
-      //   console.log(movieGenreArray);
-
-      //   const allGenresFromArray = movieGenreArray.forEach((genre) => {
-      //     return genre;
-      //   });
-      //   console.log(allGenresFromArray);
-
-      //   // allGenresFromArray.filter((genre) => {
-      //   //   // console.log(genre === movie)
-      //   // });
-      //   // console.log(movie.genre[0])
-      // });
-
-      // movies.map((movie) => {
-      //   console.log(gotGenre === movie.genre[0]);
-      // });
-    });
   };
-
   // return genre
   getGenre();
 
   // inject links into nav uL
   ul.innerHTML = genreListContent;
+
+  // inject movies when genre is clicked
+  //   see all btn
+  var seeAllBtn = document.querySelector(".seeAll");
+  // find genre id that matches movie.genre[0]
+  movies.filter((movie) => {
+    let g = genres.filter((genre) => {
+      return genre === movie.genre[0];
+    });
+    return movie;
+  });
+  const genreLink = document.querySelectorAll(".sidebar_link");
+  genreLink.forEach((link) => {
+    link.addEventListener(
+      "click",
+      () => {
+        ShowAllMovies(
+          movies,
+          main,
+          movieSection,
+          moviesContainer,
+          header,
+          input,
+          mediaQuerySmall,
+          mediaQueryMedium,
+          mediaQueryMaxMedium,
+          mediaQueryLarge,
+          banner
+        );
+      },
+      false
+    );
+  });
 };
 
 export default Sidebar;

@@ -3,7 +3,7 @@ import SingleMoviePage from "./SingleMoviePage.js";
 
 // show AZ page
 function ShowAllMovies(
-  seeAllBtn,
+  // seeAllBtn,
   movies,
   main,
   movieSection,
@@ -17,7 +17,7 @@ function ShowAllMovies(
   banner
 ) {
   {
-    this.seeAllBtn = seeAllBtn;
+    // this.seeAllBtn = seeAllBtn;
     this.movies = movies;
     this.main = main;
     this.movieSection = movieSection;

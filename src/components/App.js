@@ -26,7 +26,21 @@ const App = (movies, genres) => {
   const mediaQueryLarge = window.matchMedia("(min-width: 1024px)");
 
   // Components
-  Sidebar(body, movies, genres);
+  Sidebar(
+    body,
+    movies,
+    genres,
+    main,
+    movieSection,
+    moviesContainer,
+    header,
+    input,
+    mediaQuerySmall,
+    mediaQueryMedium,
+    mediaQueryMaxMedium,
+    mediaQueryLarge,
+    banner
+  );
 
   Banner(
     header,
