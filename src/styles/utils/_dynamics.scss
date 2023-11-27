@@ -14,3 +14,20 @@
 .green {
   color: #61a823;
 }
+
+.slide-in-right {
+  transform: translateX(0vw);
+  transition: ease 650ms;
+  opacity: 1;
+}
+
+.body-blackout {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000052;
+  transition: ease-in-out 600ms;
+}
