@@ -1,15 +1,4 @@
 function Banner(header, banner, movies) {
-  // return most popular movie
-  //   const mostPopularMovie = movies.filter((movie) => {
-  //     const { popularity } = movie;
-
-  //     if (popularity > 2000) {
-  //       return movie;
-  //     }
-  //   });
-  //   var mostPopularMovieData = mostPopularMovie[0];
-
-  // return randowm movie
   const getRandomMovie = Math.floor(Math.random() * movies.length);
   const randomMovie = movies[getRandomMovie];
 

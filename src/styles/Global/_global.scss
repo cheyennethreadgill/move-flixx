@@ -24,6 +24,12 @@ header {
   position: absolute;
   z-index: 2;
   width: 100%;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 h1,
@@ -48,9 +54,10 @@ h2 {
   letter-spacing: 0.3px;
   color: $color-teal-light;
 }
-// h3 {
-//   font-weight: 200;
-// }
+a {
+  text-decoration: none;
+  color: white;
+}
 main {
   padding: 0 0.8em;
 }

@@ -2,8 +2,9 @@ import Banner from "./Home/Banner.js";
 import SearchInput from "./SearchInput.js";
 import SingleMoviePage from "./SingleMoviePage.js";
 import MovieGenresSection from "./Home/MovieGenresSection.js";
+import Sidebar from "./Sidebar.js";
 
-function App(movies) {
+const App = (movies, genres) => {
   const html = String.raw;
 
   var movieSection;
@@ -19,13 +20,23 @@ function App(movies) {
 
   // queries
   const mediaQuerySmall = window.matchMedia("(min-width: 200px)");
+  const mediaQueryMaxSmall = window.matchMedia("(max-width: 400px)");
   const mediaQueryMedium = window.matchMedia("(min-width: 600px)");
   const mediaQueryMaxMedium = window.matchMedia("(max-width: 600px)");
   const mediaQueryLarge = window.matchMedia("(min-width: 1024px)");
 
   // Components
+  Sidebar(body, movies, genres);
 
-  Banner(header, banner, movies);
+  Banner(
+    header,
+    banner,
+    movies,
+    mediaQuerySmall,
+    mediaQueryMedium,
+    mediaQueryMaxMedium,
+    mediaQueryLarge
+  );
 
   SearchInput({
     movies,
@@ -96,7 +107,7 @@ function App(movies) {
     moviesContainer,
     banner
   );
-}
+};
 
 // Dont need, already rendering in the async function
 // App();

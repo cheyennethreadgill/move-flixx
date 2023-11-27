@@ -73,6 +73,11 @@ header {
   z-index: 2;
   width: 100%;
 }
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 h1,
 h2,
@@ -96,6 +101,11 @@ h2 {
 h2 {
   letter-spacing: 0.3px;
   color: rgba(131, 208, 223, 0.8470588235);
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 main {
@@ -464,6 +474,35 @@ button {
     font-size: 4em;
   }
 }
+.navigation {
+  background-color: #292847;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 300px;
+  height: 100vh;
+  overflow-y: scroll;
+  transform: translateX(-100vw);
+  opacity: 0.92;
+  transition: ease 650ms;
+}
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2em;
+  gap: 1.4em;
+  overflow-y: scroll;
+}
+.navigation ul li {
+  list-style: none;
+}
+.navigation ul li a {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
 .hide {
   display: none;
 }
@@ -482,4 +521,21 @@ button {
 
 .green {
   color: #61a823;
+}
+
+.slide-in-right {
+  transform: translateX(0vw);
+  transition: ease 650ms;
+  opacity: 1;
+}
+
+.body-blackout {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3215686275);
+  transition: ease-in-out 600ms;
 }/*# sourceMappingURL=index.css.map */
