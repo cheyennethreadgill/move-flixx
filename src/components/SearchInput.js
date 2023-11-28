@@ -77,7 +77,7 @@ function SearchInput({
       const handleLaptopChange = (e) => {
         if (e.matches) {
           moviesContainer.style.cssText =
-            "grid-template-columns: repeat(5, 232px);";
+            "grid-template-columns: repeat(6, 283px);";
         }
       };
       handleLaptopChange(mediaQueryLarge);
