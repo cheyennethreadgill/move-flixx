@@ -27,6 +27,23 @@ const Sidebar = (
   // injections
   body.appendChild(bodyBlackout);
 
+  // create genre links
+  const getGenre = () => {
+    genreListContent = genres
+      .map((genre) => {
+        /**** Returning genre name */
+        return ` <li >
+          <button href="#" class="seeAll sidebar_link" value=${genre.id}>${genre.name}</button>
+        </li>`;
+      })
+      .join("");
+  };
+  // return genre to DOM
+  getGenre();
+
+  // inject links into nav uL
+  ul.innerHTML = genreListContent;
+
   // animate sidebar when hamburger is clicked
   sidebarHamburger.addEventListener(
     "click",
@@ -48,37 +65,6 @@ const Sidebar = (
     },
     false
   );
-
-  // close sidebar when body is clicked
-  bodyBlackout.addEventListener(
-    "click",
-    () => {
-      sidebar.classList.toggle("slide-in-right");
-      bodyBlackout.classList.toggle("body-blackout");
-
-      if (!sidebar.classList.contains("slide-in-right")) {
-        body.style.cssText = "overflow: initial;";
-      }
-    },
-    false
-  );
-
-  // create genre links
-  const getGenre = () => {
-    genreListContent = genres
-      .map((genre) => {
-        /**** Returning genre name */
-        return ` <li >
-          <button href="#" class="seeAll sidebar_link" value=${genre.id}>${genre.name}</button>
-        </li>`;
-      })
-      .join("");
-  };
-  // return genre to DOM
-  getGenre();
-
-  // inject links into nav uL
-  ul.innerHTML = genreListContent;
 
   // inject movies when genre is clicked
   const genreLink = document.querySelectorAll(".sidebar_link");
@@ -107,6 +93,21 @@ const Sidebar = (
           mediaQueryLarge,
           banner
         );
+
+        // close sidebar when body is clicked
+
+        sidebar.classList.toggle("slide-in-right");
+        bodyBlackout.classList.toggle("body-blackout");
+
+        if (!sidebar.classList.contains("slide-in-right")) {
+          body.style.cssText = "overflow: initial;";
+        }
+
+        // scroll to movie section when genre is clicked
+        window.scrollTo({
+          top: 863.2000122070312,
+          behavior: "smooth",
+        });
       },
       false
     );

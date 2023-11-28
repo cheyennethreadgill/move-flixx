@@ -76,7 +76,9 @@ header {
 header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 2em;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 
 h1,
@@ -145,7 +147,6 @@ button {
   }
 }
 @media screen and (min-width: 600px) {
-  main,
   .container {
     padding: 0 7.8em;
   }
@@ -223,7 +224,7 @@ button {
     grid-template-rows: 9fr 3fr;
   }
   .movies_movie_img-container {
-    height: 40vh;
+    height: 348px;
   }
   .movies_movie_text {
     padding: 0.5em;
@@ -248,6 +249,10 @@ button {
     background-color: rgba(58, 58, 99, 0.5294117647);
   }
 }
+header .navigation-hamburger {
+  cursor: pointer;
+}
+
 .single-movie {
   display: flex;
   flex-direction: column;
@@ -539,4 +544,5 @@ button {
   height: 100%;
   background: rgba(0, 0, 0, 0.3215686275);
   transition: ease-in-out 600ms;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */

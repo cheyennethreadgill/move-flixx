@@ -68,6 +68,21 @@ const App = (movies, genres) => {
 
   // **************************************************GENRES
 
+  const All = new MovieGenresSection(
+    "All",
+    movies,
+    movieSection,
+    main,
+    header,
+    input,
+    "rating",
+    mediaQuerySmall,
+    mediaQueryMedium,
+    mediaQueryMaxMedium,
+    mediaQueryLarge,
+    banner
+  );
+
   const New = new MovieGenresSection(
     "New",
     movies,
@@ -91,20 +106,6 @@ const App = (movies, genres) => {
     header,
     input,
     "popularity",
-    mediaQuerySmall,
-    mediaQueryMedium,
-    mediaQueryMaxMedium,
-    mediaQueryLarge,
-    banner
-  );
-  const All = new MovieGenresSection(
-    "All",
-    movies,
-    movieSection,
-    main,
-    header,
-    input,
-    "rating",
     mediaQuerySmall,
     mediaQueryMedium,
     mediaQueryMaxMedium,
