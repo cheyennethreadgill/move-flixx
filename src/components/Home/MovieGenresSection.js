@@ -26,14 +26,15 @@ function MovieGenresSection(
   }
 
   // *************************************Create movie section
+
   movieSection = document.createElement("section");
   movieSection.setAttribute("class", "movie-section");
 
   const dFlex = document.createElement("div");
-  dFlex.setAttribute("class", "d-flex");
+  dFlex.classList.add("container", "d-flex");
   dFlex.innerHTML = `
-  <h2>${title}</h2>
-  <button id="${title}" class="seeAll">See All</button>
+      <h2>${title}</h2>
+      <button id="${title}" class="seeAll">See All</button>
   `;
   movieSection.appendChild(dFlex);
 
