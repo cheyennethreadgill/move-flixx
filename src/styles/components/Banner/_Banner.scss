@@ -1,0 +1,27 @@
+// queries
+// phone
+@media screen and (min-width: 200px) {
+}
+// ipad & down
+@media screen and (max-width: 600px) {
+  .banner {
+    &_text {
+      &-show-more {
+        cursor: pointer;
+      }
+    }
+  }
+}
+// ipad & up
+@media screen and (min-width: 600px) {
+}
+
+// laptop MAX
+@media screen and (min-width: 1024px) {
+}
+// laptop
+@media screen and (max-width: 1024px) {
+}
+// desktop
+@media screen and (min-width: 1920px) {
+}

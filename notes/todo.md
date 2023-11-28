@@ -1,6 +1,6 @@
 <!-- navigation -->
 
------desktop
+<!-- -----desktop
 full sidebar display
 transform translate 0
 
@@ -8,7 +8,9 @@ transform translate 0
 hidden siderbar display until jamburger click
 transform translate -100vw
 TO
-transform translate 0
+transform translate 0 -->
 
-<!-- fix nav links -->
-<!-- scroll to animation when genre link is clicked -->
+<!-- create show mor functionality -->
+<!-- set the movie description height to show a certain amount of chars -->
+<!-- add show more button -->
+<!--   when the show more btn is clicked, the height spans the rest of the content -->
