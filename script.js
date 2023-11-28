@@ -44,6 +44,7 @@ const MoviesList = async function () {
 
   // passing movie array to main app component
   App(movieList, genres);
+  console.log(movieList, genres);
 };
 
 MoviesList();

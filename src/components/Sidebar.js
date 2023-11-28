@@ -27,6 +27,20 @@ const Sidebar = (
   // injections
   body.appendChild(bodyBlackout);
 
+  // close sidebar when body is clicked
+  bodyBlackout.addEventListener(
+    "click",
+    () => {
+      sidebar.classList.toggle("slide-in-right");
+      bodyBlackout.classList.toggle("body-blackout");
+
+      if (!sidebar.classList.contains("slide-in-right")) {
+        body.style.cssText = "overflow: initial;";
+      }
+    },
+    false
+  );
+
   // create genre links
   const getGenre = () => {
     genreListContent = genres
@@ -66,7 +80,7 @@ const Sidebar = (
     false
   );
 
-  // inject movies when genre is clicked
+  // inject movies when genre link is clicked
   const genreLink = document.querySelectorAll(".sidebar_link");
   genreLink.forEach((link) => {
     const linkValue = link.value;
@@ -76,10 +90,17 @@ const Sidebar = (
       () => {
         // find movie that matches genre thats clicked
         const genreFilter = movies.filter((movie) => {
-          // console.log(movie.genre[0] === linkValue);
-          return linkValue == movie.genre[0];
+          let movieGenreArray = movie.genre;
+
+          // for genre array within each movie, return the genre that matches the link value
+          const singleMovieGenreFromArray = movieGenreArray.filter((genre) => {
+            return genre == linkValue;
+          });
+          //   then return the genre generated form the single movie genre array, that matches the link value
+          return linkValue == singleMovieGenreFromArray;
         });
 
+        // create and show movie cards in DOM based on the genre clicked
         new ShowAllMovies(
           genreFilter,
           main,
@@ -95,7 +116,6 @@ const Sidebar = (
         );
 
         // close sidebar when body is clicked
-
         sidebar.classList.toggle("slide-in-right");
         bodyBlackout.classList.toggle("body-blackout");
 
@@ -104,8 +124,7 @@ const Sidebar = (
         }
 
         // scroll to movie section when genre is clicked
-        window.scrollTo({
-          top: 863.2000122070312,
+        moviesContainer.scrollIntoView({
           behavior: "smooth",
         });
       },
