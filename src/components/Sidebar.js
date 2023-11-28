@@ -15,16 +15,19 @@ const Sidebar = (
   mediaQueryLarge,
   banner
 ) => {
+  // selectors
   const sidebar = document.querySelector(".navigation");
   const sidebarHamburger = document.querySelector(".navigation-hamburger");
   const ul = sidebar.querySelector("ul");
   const bodyBlackout = document.createElement("div");
 
-  body.appendChild(bodyBlackout);
-
+  // variables
   var genreListContent;
 
-  // animate sidebar
+  // injections
+  body.appendChild(bodyBlackout);
+
+  // animate sidebar when hamburger is clicked
   sidebarHamburger.addEventListener(
     "click",
     () => {
@@ -46,10 +49,21 @@ const Sidebar = (
     false
   );
 
-  // map movie genre and return movie genre in outer function
-  // map genre that matches movie genre
-  // ****END GOAL: return genre (genre name)
+  // close sidebar when body is clicked
+  bodyBlackout.addEventListener(
+    "click",
+    () => {
+      sidebar.classList.toggle("slide-in-right");
+      bodyBlackout.classList.toggle("body-blackout");
 
+      if (!sidebar.classList.contains("slide-in-right")) {
+        body.style.cssText = "overflow: initial;";
+      }
+    },
+    false
+  );
+
+  // create genre links
   const getGenre = () => {
     genreListContent = genres
       .map((genre) => {
@@ -60,29 +74,28 @@ const Sidebar = (
       })
       .join("");
   };
-  // return genre
+  // return genre to DOM
   getGenre();
 
   // inject links into nav uL
   ul.innerHTML = genreListContent;
 
   // inject movies when genre is clicked
-  //   see all btn
-  var seeAllBtn = document.querySelector(".seeAll");
-  // find genre id that matches movie.genre[0]
-  movies.filter((movie) => {
-    let g = genres.filter((genre) => {
-      return genre === movie.genre[0];
-    });
-    return movie;
-  });
   const genreLink = document.querySelectorAll(".sidebar_link");
   genreLink.forEach((link) => {
+    const linkValue = link.value;
+
     link.addEventListener(
       "click",
       () => {
-        ShowAllMovies(
-          movies,
+        // find movie that matches genre thats clicked
+        const genreFilter = movies.filter((movie) => {
+          // console.log(movie.genre[0] === linkValue);
+          return linkValue == movie.genre[0];
+        });
+
+        new ShowAllMovies(
+          genreFilter,
           main,
           movieSection,
           moviesContainer,

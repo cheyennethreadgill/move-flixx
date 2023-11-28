@@ -45,7 +45,7 @@ function MovieGenresSection(
   moviesContainer.setAttribute("class", "movies_container");
   // ************************************Create movie container
 
-  // ****************************Find Movies
+  // returns movies that matches the filterBy category
   const thisMovies = movies
     .filter((movie) => {
       if (filterBy === "rating") {
@@ -66,12 +66,14 @@ function MovieGenresSection(
     })
     .slice(0, 6);
 
+  // returns movie card for filtered movies
   const thisMoviesContent = thisMovies
     .map((movie) => {
       return Movie(movie);
     })
     .join("");
 
+  // returns ALL movies based on filterby query
   const thisMoviesAll = movies.filter((movie) => {
     if (filterBy === "rating") {
       if (movie[filterBy] >= 0) {
@@ -98,15 +100,15 @@ function MovieGenresSection(
   // *************************************Append Movies to main
 
   // *********************************************
-  // see all
+  // selectors (END OF SCRIPT)
   const seeAllBtn = document.querySelector("#" + title);
 
+  // show all movies when see all btn is clicked
   seeAllBtn.addEventListener(
     "click",
     () => {
       seeAllBtn.classList.add("hide");
       new ShowAllMovies(
-        seeAllBtn,
         thisMoviesAll,
         main,
         movieSection,
@@ -117,7 +119,8 @@ function MovieGenresSection(
         mediaQueryMedium,
         mediaQueryMaxMedium,
         mediaQueryLarge,
-        banner
+        banner,
+        seeAllBtn
       );
     },
     false
