@@ -32,3 +32,15 @@
   transition: ease-in-out 600ms;
   cursor: pointer;
 }
+
+// show/hide text
+.show-content {
+  height: fit-content;
+  overflow: visible;
+  transition: all ease 300ms;
+}
+.hide-content {
+  height: 8.3em;
+  overflow: hidden;
+  transition: all ease 300ms;
+}

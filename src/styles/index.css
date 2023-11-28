@@ -253,6 +253,11 @@ header .navigation-hamburger {
   cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
+  .banner_text-show-more {
+    cursor: pointer;
+  }
+}
 .single-movie {
   display: flex;
   flex-direction: column;
@@ -545,4 +550,17 @@ header .navigation-hamburger {
   background: rgba(0, 0, 0, 0.3215686275);
   transition: ease-in-out 600ms;
   cursor: pointer;
+}
+
+.show-content {
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: visible;
+  transition: all ease 300ms;
+}
+
+.hide-content {
+  height: 8.3em;
+  overflow: hidden;
+  transition: all ease 300ms;
 }/*# sourceMappingURL=index.css.map */
