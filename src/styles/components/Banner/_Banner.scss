@@ -8,6 +8,10 @@
     &_text {
       &-show-more {
         cursor: pointer;
+        color: $color-light-periwinkle;
+        letter-spacing: 0.5px;
+        padding: 10px 0 0 0;
+        display: inline-block;
       }
     }
   }

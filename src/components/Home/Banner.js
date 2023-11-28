@@ -21,7 +21,7 @@ function Banner(
       <div>
         <h3 class="banner_text">${description}
         </h3>
-        <a class="banner_text-show-more"> ...Show More </a>
+        <a class="banner_text-show-more"> <strong> ...Show More </strong> </a>
     </div>
     </div>
   `;
