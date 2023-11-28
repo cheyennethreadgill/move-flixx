@@ -3,7 +3,6 @@ import SingleMoviePage from "./SingleMoviePage.js";
 
 // show AZ page
 function ShowAllMovies(
-  seeAllBtn,
   movies,
   main,
   movieSection,
@@ -14,10 +13,10 @@ function ShowAllMovies(
   mediaQueryMedium,
   mediaQueryMaxMedium,
   mediaQueryLarge,
-  banner
+  banner,
+  seeAllBtn
 ) {
   {
-    this.seeAllBtn = seeAllBtn;
     this.movies = movies;
     this.main = main;
     this.movieSection = movieSection;

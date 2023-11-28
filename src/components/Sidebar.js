@@ -1,14 +1,33 @@
-const Sidebar = (body, movies, genres) => {
+import ShowAllMovies from "./ShowAllMovies.js";
+
+const Sidebar = (
+  body,
+  movies,
+  genres,
+  main,
+  movieSection,
+  moviesContainer,
+  header,
+  input,
+  mediaQuerySmall,
+  mediaQueryMedium,
+  mediaQueryMaxMedium,
+  mediaQueryLarge,
+  banner
+) => {
+  // selectors
   const sidebar = document.querySelector(".navigation");
   const sidebarHamburger = document.querySelector(".navigation-hamburger");
   const ul = sidebar.querySelector("ul");
   const bodyBlackout = document.createElement("div");
 
-  body.appendChild(bodyBlackout);
-
+  // variables
   var genreListContent;
 
-  // animate sidebar
+  // injections
+  body.appendChild(bodyBlackout);
+
+  // animate sidebar when hamburger is clicked
   sidebarHamburger.addEventListener(
     "click",
     () => {
@@ -30,48 +49,68 @@ const Sidebar = (body, movies, genres) => {
     false
   );
 
-  // map movie genre and return movie genre in outer function
-  // map genre that matches movie genre
-  // ****END GOAL: return genre (genre name)
+  // close sidebar when body is clicked
+  bodyBlackout.addEventListener(
+    "click",
+    () => {
+      sidebar.classList.toggle("slide-in-right");
+      bodyBlackout.classList.toggle("body-blackout");
 
+      if (!sidebar.classList.contains("slide-in-right")) {
+        body.style.cssText = "overflow: initial;";
+      }
+    },
+    false
+  );
+
+  // create genre links
   const getGenre = () => {
     genreListContent = genres
       .map((genre) => {
         /**** Returning genre name */
-        return ` <li>
-        <a href="#">${genre.name}</a>
-      </li>`;
+        return ` <li >
+          <button href="#" class="seeAll sidebar_link" value=${genre.id}>${genre.name}</button>
+        </li>`;
       })
       .join("");
-    const gotGenre = genres.map((genre) => {
-      console.log(genre.name);
-
-      // const gotMovieGenre = movies.map((movie) => {
-      //   let movieGenreArray = movie.genre;
-      //   console.log(movieGenreArray);
-
-      //   const allGenresFromArray = movieGenreArray.forEach((genre) => {
-      //     return genre;
-      //   });
-      //   console.log(allGenresFromArray);
-
-      //   // allGenresFromArray.filter((genre) => {
-      //   //   // console.log(genre === movie)
-      //   // });
-      //   // console.log(movie.genre[0])
-      // });
-
-      // movies.map((movie) => {
-      //   console.log(gotGenre === movie.genre[0]);
-      // });
-    });
   };
-
-  // return genre
+  // return genre to DOM
   getGenre();
 
   // inject links into nav uL
   ul.innerHTML = genreListContent;
+
+  // inject movies when genre is clicked
+  const genreLink = document.querySelectorAll(".sidebar_link");
+  genreLink.forEach((link) => {
+    const linkValue = link.value;
+
+    link.addEventListener(
+      "click",
+      () => {
+        // find movie that matches genre thats clicked
+        const genreFilter = movies.filter((movie) => {
+          // console.log(movie.genre[0] === linkValue);
+          return linkValue == movie.genre[0];
+        });
+
+        new ShowAllMovies(
+          genreFilter,
+          main,
+          movieSection,
+          moviesContainer,
+          header,
+          input,
+          mediaQuerySmall,
+          mediaQueryMedium,
+          mediaQueryMaxMedium,
+          mediaQueryLarge,
+          banner
+        );
+      },
+      false
+    );
+  });
 };
 
 export default Sidebar;
