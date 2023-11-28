@@ -453,8 +453,12 @@ header .navigation-hamburger {
 
 @media screen and (max-width: 600px) {
   .banner {
-    height: 283px;
+    height: -moz-max-content;
+    height: max-content;
     margin: 0 0 2em 0;
+  }
+  .banner_img {
+    height: 290px;
   }
   .banner_heading {
     font-size: 2.7em;

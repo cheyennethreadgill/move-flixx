@@ -14,3 +14,6 @@ transform translate 0 -->
 <!-- set the movie description height to show a certain amount of chars -->
 <!-- add show more button -->
 <!--   when the show more btn is clicked, the height spans the rest of the content -->
+
+<!-- change width of decription -->
+<!-- add go to movie button from banner movie -->
