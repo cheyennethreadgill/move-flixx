@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserWebpackPlugin = require("terser-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -28,6 +30,10 @@ module.exports = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        type: "asset",
+      },
     ],
   },
   devServer: {
@@ -36,5 +42,9 @@ module.exports = {
     },
     port: 9000,
     compress: true,
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserWebpackPlugin()],
   },
 };

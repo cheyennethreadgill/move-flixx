@@ -1,8 +1,10 @@
 <!--
+webpack get started htmlwebpackplugin
+
+
+
 
 movie grenres rendering 9 times when method is called in app
-
-
 
 movie section is rendering 12 times
   sections are rendering for each movie
