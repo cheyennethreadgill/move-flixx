@@ -18,17 +18,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.scss$/,
         use: [
+          // Creates `style` nodes from JS strings
           "style-loader",
+          // Translates CSS into CommonJS
           "css-loader",
-          {
-            loader: "sass-loader",
-            options: {
-              // Prefer `dart-sass`
-              implementation: require("sass"),
-            },
-          },
+          // Compiles Sass to CSS
+          "sass-loader",
         ],
       },
     ],
