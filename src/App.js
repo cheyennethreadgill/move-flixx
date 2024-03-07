@@ -126,5 +126,6 @@ async function App() {
     banner
   );
 }
+
 App();
 

@@ -80,7 +80,7 @@ const Sidebar = (
     false
   );
 
-  // inject movies when genre link is clicked
+  // ***inject movies when genre link is clicked
   const genreLink = document.querySelectorAll(".sidebar_link");
   genreLink.forEach((link) => {
     const linkValue = link.value;

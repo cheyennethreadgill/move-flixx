@@ -127,5 +127,5 @@ function MovieGenresSection(
     false
   );
 }
-
+// MovieGenresSection()
 export default MovieGenresSection;
