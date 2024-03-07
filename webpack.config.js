@@ -28,6 +28,13 @@ module.exports = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.css$/i,
+        loader: "css-loader",
+        options: {
+          url: true,
+        },
+      },
     ],
   },
   devServer: {
