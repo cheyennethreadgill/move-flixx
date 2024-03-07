@@ -235,3 +235,4 @@ function SingleMoviePage(
 }
 
 export default SingleMoviePage;
+

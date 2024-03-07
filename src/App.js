@@ -132,6 +132,6 @@ async function App() {
     banner
   );
 }
-App()
+App();
 // document.addEventListener("DOMContentLoaded", App, false);
 
