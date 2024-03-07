@@ -39,7 +39,6 @@ const MoviesList = async function () {
     };
     return movieData;
   });
-  // console.log(movieList);
 
   // returning genre array
   const GENRE_URL = "https://api.themoviedb.org/3/genre/movie/list?language=en";
