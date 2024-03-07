@@ -49,5 +49,5 @@ function Banner(
   };
   handlePhoneChange(mediaQueryMaxMedium);
 }
-
 export default Banner;
+

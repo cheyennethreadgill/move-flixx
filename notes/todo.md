@@ -1,3 +1,20 @@
+<!--
+
+movie grenres rendering 9 times when method is called in app
+
+
+
+movie section is rendering 12 times
+  sections are rendering for each movie
+
+movie list is rendering 9 times
+
+there are 20 movies
+there are 19 genres
+
+
+ -->
+
 <!-- navigation -->
 
 <!-- -----desktop
@@ -17,3 +34,4 @@ transform translate 0 -->
 
 <!-- change width of decription -->
 <!-- add go to movie button from banner movie -->
+

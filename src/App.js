@@ -3,12 +3,14 @@ import SearchInput from "../src/components/SearchInput.js";
 import SingleMoviePage from "../src/components/SingleMoviePage.js";
 import MovieGenresSection from "../src/components/Home/MovieGenresSection.js";
 import Sidebar from "../src/components/Sidebar.js";
-import apiPackage from "../src/hooks/apiCalls.js";
+import MoviesList from "../src/hooks/apiCalls.js";
 import "../src/styles/index.scss";
 
+// Invokes App at end
 async function App() {
-  const apiPackageResponse = await apiPackage();
+  const apiPackageResponse = await MoviesList();
   const { movieList, genres } = apiPackageResponse;
+  console.log(movieList);
 
   var movieSection;
 
@@ -116,6 +118,10 @@ async function App() {
     banner
   );
 
+  All.createMovieSection();
+  New.createMovieSection();
+  CriticallyAcclaimed.createMovieSection();
+
   SingleMoviePage(
     movieList,
     movieSection,
@@ -127,5 +133,5 @@ async function App() {
   );
 }
 
-App();
+document.addEventListener("DOMContentLoaded", App, false);
 
