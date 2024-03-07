@@ -4,7 +4,7 @@ import ShowAllMovies from "./ShowAllMovies.js";
 import Banner from "./Home/Banner.js";
 
 function SearchInput({
-  movies,
+  movieList,
   movieSection,
   moviesContainer,
   main,
@@ -16,6 +16,7 @@ function SearchInput({
   mediaQueryLarge,
   banner,
 }) {
+  console.log(movieList);
   // change input to title case
   function toTitleCase(inputValue) {
     return inputValue.replace(/\w\S*/g, function (txt) {
@@ -30,7 +31,7 @@ function SearchInput({
       e.target.value = toTitleCase(this.value);
 
       // return found movies
-      const foundMovies = movies.filter((movie) => {
+      const foundMovies = movieList.filter((movie) => {
         const { title } = movie;
 
         if (title.includes(inputValue)) {
@@ -89,7 +90,7 @@ function SearchInput({
         .addEventListener(
           "click",
           SingleMoviePage(
-            movies,
+            movieList,
             movieSection,
             main,
             header,
@@ -105,3 +106,4 @@ function SearchInput({
 }
 
 export default SearchInput;
+
