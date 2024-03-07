@@ -2,7 +2,7 @@ import ShowAllMovies from "./ShowAllMovies.js";
 
 const Sidebar = (
   body,
-  movies,
+  movieList,
   genres,
   main,
   movieSection,
@@ -89,7 +89,7 @@ const Sidebar = (
       "click",
       () => {
         // find movie that matches genre thats clicked
-        const genreFilter = movies.filter((movie) => {
+        const genreFilter = movieList.filter((movie) => {
           let movieGenreArray = movie.genre;
 
           // for genre array within each movie, return the genre that matches the link value
@@ -134,3 +134,4 @@ const Sidebar = (
 };
 
 export default Sidebar;
+

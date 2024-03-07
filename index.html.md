@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta description="This is Movie Flixx. A cozy app for streaming movies." />
+    <link rel="stylesheet" href="../src/styles/index.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Movie Flixx</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>Movie Flixx</h1>
+        <span class="navigation-hamburger"
+          ><i class="fa-2x fa-solid fa-bars"></i
+        ></span>
+      </div>
+      <!-- navigation -->
+      <nav class="navigation">
+        <ul></ul>
+      </nav>
+    </header>
+    <!-- banner -->
+    <section class="banner"></section>
+    <!-- input -->
+    <div class="container">
+      <input type="text" class="search_input" placeholder="Search Movies" />
+    </div>
+    <main></main>
+  </body>
+
+  <script defer src="App.bundle.js" type="module"></script>
+  <script
+    src="https://kit.fontawesome.com/675dce42c6.js"
+    crossorigin="anonymous"
+    defer
+  ></script>
+</html>
